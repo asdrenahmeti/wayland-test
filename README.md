@@ -1,6 +1,6 @@
 
 # Wayland Website
-Main project for Wayland Website made with ❤️ using React, TypeScript and Next
+Main project for Wayland Website made with ❤️ using React, TypeScript and Next.
 
 
 ## Install and Run
