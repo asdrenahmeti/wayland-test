@@ -1,8 +1,14 @@
+import React from 'react'
+
 interface Navigation {
-  id: number;
-  name: string;
-  desc: string;
-  subs: string[];
+  id: number
+  name: string
+  desc: string
+  subs: string[]
 }
 
-export {Navigation}
+interface ChildProps {
+  children: React.ReactNode
+}
+
+export type { Navigation, ChildProps }

@@ -13,7 +13,9 @@ function Navbar() {
     <>
       <nav className="bg-primary font-mulish px-7 py-3 flex justify-between items-center">
         <Link href="/" passHref={true}>
-          <Image src={Logo} alt="Wayland Logo" />
+          <a>
+            <Image src={Logo} alt="Wayland Logo" />
+          </a>
         </Link>
 
         <ul className="flex flex-row gap-2 w-full justify-center">
@@ -36,9 +38,13 @@ function Navbar() {
                 </div>
                 <ul className="flex flex-row -top-6 relative">
                   {nav.subs.map((sub: string, index: number) => (
-                    <Link href={`${sub.toLowerCase()}`} key={index}>
+                    <Link
+                      href={`/${sub.replace(/\s+/g, '-').toLowerCase()}`}
+                      key={index}
+                    >
                       <a className="text-primary mr-10 font-mulish font-normal text-base flex items-center">
-                        <AiOutlineRight className="inline-block text-w-pink mr-2"/>{sub.toUpperCase()}
+                        <AiOutlineRight className="inline-block text-w-pink mr-2" />
+                        {sub.toUpperCase()}
                       </a>
                     </Link>
                   ))}
