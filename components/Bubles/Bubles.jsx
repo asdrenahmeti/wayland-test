@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styles from './Bubles.module.scss'
 
 function Bubles({ count, height, width, children }) {
-    const [bubles, setBubles] = useState(Array.from(Array(count).keys()))
+    const [bubles] = useState(Array.from(Array(count).keys()))
     const [coords, setCoords] = useState([])
     const sizes = ['10px', '20px', '25px']
 

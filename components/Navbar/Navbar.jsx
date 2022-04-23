@@ -6,7 +6,6 @@ import Button from '../Button/ButtonFill'
 import Logo from './../../public/Logo.svg'
 import styles from './Navbar.module.scss'
 import { AiOutlineRight } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi'
 
 function Navbar() {
   return (
@@ -18,7 +17,7 @@ function Navbar() {
           </a>
         </Link>
 
-        <GiHamburgerMenu className="text-white h-[35px] w-[35px] hidden lg:block" />
+        {/* <GiHamburgerMenu className="text-white h-[35px] w-[35px] hidden lg:block" /> */}
 
         <ul className="flex flex-row gap-2 hidden w-full justify-center absolute h-full w-full left-0 lg:flex">
           {NavItems.map((nav) => (
@@ -55,7 +54,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        {/* <Button link="/connect" text="Connect" /> */}
+        <Button link="/connect" text="Connect" />
       </nav>
     </>
   )

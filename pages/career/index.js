@@ -1,14 +1,7 @@
-import React, { useRef, useEffect } from 'react'
 import Container from '../../components/Container/Container'
 import Section from '../../components/Section/Section'
 
 function Career() {
-  const slider = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-      console.log(slider.current)
-  }, [])
-
   return (
     <>
       <Section style="h-screen">
@@ -36,7 +29,7 @@ function Career() {
             <div className="flex gap-4 items-center">
               <div className="w-[150px] h-[150px] bg-red-300 rounded-full"></div>
               <div className="flex flex-col gap-2">
-                <h3 className="font-mulish text-md font-bold">HEY, I'M BEN</h3>
+                <h3 className="font-mulish text-md font-bold">HEY, IM BEN</h3>
                 <p className="w-[360px] text-sm">
                   My team needs a{' '}
                   <span className="font-bold text-tertiary">
@@ -55,7 +48,7 @@ function Career() {
             <div className="flex gap-4 items-center">
               <div className="w-[150px] h-[150px] bg-red-300 rounded-full"></div>
               <div className="flex flex-col gap-2">
-                <h3 className="font-mulish text-md font-bold">HEY, I'M BEN</h3>
+                <h3 className="font-mulish text-md font-bold">HEY, IM BEN</h3>
                 <p className="w-[360px] text-sm">
                   My team needs a{' '}
                   <span className="font-bold text-tertiary">
@@ -77,7 +70,7 @@ function Career() {
         <Container style="flex h-full">
           <div className="w-1/2 flex h-full items-center">
             <div className="w-1 h-4/6 bg-w-red"></div>
-            <div ref={slider} className="w-full text-center flex flex-col">
+            <div className="w-full text-center flex flex-col">
               <h1 className="font-source text-8xl font-black text-w-gray">
                 Join
               </h1>
