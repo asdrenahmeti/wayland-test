@@ -13,10 +13,15 @@
   flex: 1;
   background: white;
   position: relative;
+  box-sizing: border-box;
+  padding-top: 40px;
 }
 
 .sDiv {
   height: 500px;
+  position: absolute;
+  width: 100%;
+  top: 0;
   background: #222324;
   overflow: clip;
 }

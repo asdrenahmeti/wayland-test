@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styles from './Draggable.module.scss'
-import {BsFillArrowDownCircleFill} from 'react-icons/bs'
+import {FaArrowsAltV } from 'react-icons/fa'
 
 const Draggable = (props) => {
   // const [canMove, setCanMove] = useState(false);
@@ -42,7 +42,18 @@ const Draggable = (props) => {
           onMouseUp={onMouseUp}
           style={{ top: y }}
         >
-          <BsFillArrowDownCircleFill style={{color: '#FF5076', fontSize: 40, position: 'relative', top: '-20px'}}></BsFillArrowDownCircleFill>
+          <FaArrowsAltV
+            style={{
+              color: 'white',
+              fontSize: 40,
+              position: 'relative',
+              top: '-20px',
+              boxSizing: 'border-box',
+              backgroundColor: '#FF5353',
+              borderRadius: '100%',
+              padding: 10
+            }}
+          ></FaArrowsAltV>
         </div>
       </div>
     </div>

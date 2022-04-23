@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Section from '../components/Section/Section'
 import Container from '../components/Container/Container'
-import Blog1 from '../public/assets/images/blog-1.png'
+import Blog1 from '../public/assets/images/blog-1.jpg'
 import Globe from '../public/assets/images/globe.svg'
 import Phone from '../public/assets/images/phone.svg'
+import HomeRobot from '../public/assets/images/home-robot.svg'
 import Button from '../components/Button/Button'
 import Bubles from '../components/Bubles/Bubles'
 import Draggable from '../components/Draggable/Draggable'
@@ -73,8 +74,9 @@ const Home = () => {
                 APPS
               </h1>
             </div>
-
-            <Bubles count={10} height={600} width={600}></Bubles>
+            <Bubles count={20} height={600} width={600}>
+              <Image src={HomeRobot} objectFit="contain" layout="fill"></Image>
+            </Bubles>
           </Container>
         </Draggable>
       </Section>
@@ -203,24 +205,47 @@ const Home = () => {
             News & Insights
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-2 h-[75vh]">
-            <div className="bg-green-300 relative rounded-lg relative">
-              <Image
-                src={Blog1}
-                objectFit="cover"
-                width="100%"
-                height="100%"
-              ></Image>
-            </div>
-            <div className="bg-green-300 min-h-[200px] xl:col-span-2 relative rounded-lg">
+            <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-50 hover:saturate-100">
               <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
             </div>
-            <div className="bg-green-300 rounded-lg min-h-[200px] ">Item</div>
-            <div className="bg-green-300 rounded-lg min-h-[200px] ">Item</div>
-            <div className="bg-green-300 rounded-lg min-h-[200px] xl:col-span-2">
-              Item
+            <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-50 hover:saturate-100">
+              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
             </div>
-            <div className="bg-green-300 rounded-lg min-h-[200px] rounded-xl">
-              Item
+            <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-50 hover:saturate-100">
+              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
+            </div>
+            <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-50 hover:saturate-100">
+              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
+            </div>
+            <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-50 hover:saturate-100">
+              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
+            </div>
+            <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-50 hover:saturate-100">
+              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <h2 className="absolute text-white font-mulish text-2xl max-w-[80%]">
+                Title of news: Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </h2>
             </div>
           </div>
           <div>

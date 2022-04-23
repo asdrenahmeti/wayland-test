@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styles from './Bubles.module.scss'
 
-function Bubles({ count, height, width }) {
+function Bubles({ count, height, width, children }) {
     const [bubles, setBubles] = useState(Array.from(Array(count).keys()))
     const [coords, setCoords] = useState([])
     const sizes = ['10px', '20px', '25px']
@@ -22,24 +22,32 @@ function Bubles({ count, height, width }) {
 
 
   return (
-    <div style={{width: width, height: height, position: 'relative', marginLeft: 'auto'}}>
+    <div
+      style={{
+        width: width,
+        height: height,
+        position: 'relative',
+        marginLeft: 'auto'
+      }}
+    >
       {coords.map((item, key) => {
         return (
           <div
             key={key}
-            className={`${styles[`pulse-${Math.floor(Math.random() * sizes.length)}`]} bg-white rounded-full blur-sm`}
+            className={`${
+              styles[`pulse-${Math.floor(Math.random() * sizes.length)}`]
+            } bg-white rounded-full blur-sm`}
             style={{
               bottom: item.x,
               left: item.y,
               height: sizes[item.size],
               width: sizes[item.size],
-              position: 'absolute',
+              position: 'absolute'
             }}
-          >
-            {' '}
-          </div>
+          ></div>
         )
       })}
+      <div className="h-[450px] top-[40px] relative"> {children}</div>
     </div>
   )
 }
