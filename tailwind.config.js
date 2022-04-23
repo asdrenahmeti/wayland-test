@@ -5,21 +5,41 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '320px'
+      },
       keyframes: {
-                'fade-in-down': {
-                    '0%': {
-                        opacity: '0',
-                        transform: 'translateY(-10px)'
-                    },
-                    '100%': {
-                        opacity: '1',
-                        transform: 'translateY(0)'
-                    },
-                }
-            },
-            animation: {
-                'fade-in-down': 'fade-in-down 0.7s ease-out'
-            },
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(0px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        pulse: {
+          '0%': {
+            transform: 'scale(1.1)'
+          },
+          '50%': {
+            transform: 'scale(1)'
+          },
+          '100%': {
+            transform: 'scale(1.1)'
+          }
+        }
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'pulse-0': 'pulse 1s ease-in-out infinite',
+        'pulse-1': 'pulse 2s ease-in-out infinite',
+        'pulse-2': 'pulse 0.5s ease-in-out infinite'
+      },
+      maxWidth: {
+        small: '200px'
+      },
       fontFamily: {
         mulish: ['Mulish'],
         source: ['Source Sans Pro']
@@ -30,8 +50,10 @@ module.exports = {
         tertiary: '#FF8850',
         quarternary: '#B53BFF',
         light: '#444E59',
-        'w-pink': '#BE3CF1'
-
+        'w-pink': '#BE3CF1',
+        'w-gray': '#848483',
+        'w-red': '#FF5353',
+        'w-white': '#ACACAC'
       },
       linearBorderGradients: {
         directions: {

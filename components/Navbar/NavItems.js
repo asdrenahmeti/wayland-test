@@ -1,9 +1,7 @@
-import { Navigation } from "../../utils/types"
-
-const NavItems : Navigation[] = [
+const NavItems = [
   {
     id: 1,
-    name: 'ABOUT',
+    name: 'COMPANY',
     desc: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Pellentesque Efficitur Consequat Lacinia.',
     subs: ['about us', 'our values', 'careers', 'get in touch']
   },
