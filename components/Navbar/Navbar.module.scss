@@ -1,14 +1,17 @@
 li {
-    &:hover {
-        .submenu {
-            display: flex;
-            position: absolute;
-            width: 100%;
-            left: 0;
-        }
-    }
-
+  &:hover {
     .submenu {
-        display: none;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      top: 80px;
+      left: 0;
+      background-color: white;
+      z-index: 100;
     }
+  }
+
+  .submenu {
+    display: none;
+  }
 }
