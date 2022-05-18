@@ -8,7 +8,6 @@ const Draggable = (props) => {
   const [location, setLocation] = useState({ y: -9999 })
 
   const onMouseMove = event => {
-    console.log('move..:', location)
     event.preventDefault()
     if (location.y == -9999) {
       return

@@ -6,8 +6,13 @@ import Button from '../Button/ButtonFill'
 import Logo from './../../public/Logo.svg'
 import styles from './Navbar.module.scss'
 import { AiOutlineRight } from 'react-icons/ai'
+import { IoMenu } from 'react-icons/io5'
+import { useGlobalContext } from './../context'
+
 
 function Navbar() {
+    const { openSidebar } = useGlobalContext()
+
   return (
     <>
       <nav className="bg-primary font-mulish px-7 py-3 flex justify-between items-center fixed w-full z-50">
@@ -17,7 +22,7 @@ function Navbar() {
           </a>
         </Link>
 
-        {/* <GiHamburgerMenu className="text-white h-[35px] w-[35px] hidden lg:block" /> */}
+        <IoMenu className="text-white h-[30px] w-[30px] block cursor-pointer lg:hidden" onClick={openSidebar} />
 
         <ul className="flex flex-row gap-2 hidden w-full justify-center absolute h-full w-full left-0 lg:flex">
           {NavItems.map((nav) => (
@@ -54,7 +59,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <Button link="/connect" text="Connect" />
+        <Button style='hidden lg:block' link="/connect" text="Connect" />
       </nav>
     </>
   )

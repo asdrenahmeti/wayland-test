@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Section({ children, style }) {
-  return <div className={`${style} text-blue snap-end lg:h-screen`}>
+  return <div className={`${style} text-blue snap-end `}>
     {children}
   </div>
 }
