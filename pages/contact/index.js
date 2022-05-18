@@ -1,7 +1,9 @@
 import React from 'react'
+import MobileNavbar from '../../components/Navbar/MobileNavbar'
+
 
 function index() {
-  return <div>index</div>
+  return <MobileNavbar></MobileNavbar>
 }
 
 export default index

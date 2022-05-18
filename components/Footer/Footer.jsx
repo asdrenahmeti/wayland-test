@@ -12,7 +12,7 @@ import { FiInstagram } from 'react-icons/fi'
 function Footer() {
   return (
     <footer className={`${styles.footer} bg-black text-white py-8`}>
-      <Container style="flex justify-between items-center">
+      <Container style="flex flex-col gap-5 w-full justify-between items-center lg:flex-row">
         <div>
           <Link href="/" passHref={true}>
             <a>
@@ -21,9 +21,9 @@ function Footer() {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-4 justify-center">
-          <h1 className="font-mulish text-4xl font-extrabold">GOOD TALKS</h1>
-          <div className="flex gap-16 items-center">
+        <div className="flex flex-col gap-4 justify-center text-left">
+          <h1 className="font-mulish text-4xl font-extrabold text-center pb-5 lg:text-left">GOOD TALKS</h1>
+          <div className="flex flex-row flex-wrap gap-16 items-center">
             {FooterItems.map((item) => (
               <div
                 className="flex flex-col font-source text-sm uppercase gap-2"
@@ -40,7 +40,7 @@ function Footer() {
               </div>
             ))}
 
-            <div className="flex flex-col font-source text-sm uppercase gap-3">
+            <div className="flex flex-row font-source text-sm uppercase gap-3 sm:flex-col lg:flex-col">
               <Link href={'http://www.facebook.com'}>
                 <a className="hover:animate-bounce p-1 ">
                   <FiFacebook className="w-6 h-6" />
