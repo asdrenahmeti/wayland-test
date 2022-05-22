@@ -1,13 +1,14 @@
 
 .particle {
   position: absolute;
+  top: 0;
   border-radius: 50%;
 }
 
 @for $i from 1 through 50{
   @keyframes particle-animation-#{$i} {
     100% {
-      transform: translate3d((random(40) * 1vw), (random(100) * 1vh), (random(100) * 1px));
+      transform: translate3d((random(40) * 1vw), (random(90) * 1vh), (random(100) * 1px));
     }
   }
   
@@ -18,7 +19,7 @@
     height: $size;
     width: $size;
     animation-delay: -$i * .2s;
-    transform: translate3d((random(40) * 1vw), (random(100) * 1vh), (random(100) * 1px));
+    transform: translate3d((random(40) * 1vw), (random(90) * 1vh), (random(100) * 1px));
     background: #FF457E;
   }
 }

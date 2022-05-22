@@ -8,6 +8,7 @@ import Globe from '../public/assets/images/globe.svg'
 import Phone from '../public/assets/phone-animation.svg'
 import HomeRobot from '../public/assets/images/home-robot.svg'
 import Button from '../components/Button/Button'
+import ButtonFill from '../components/Button/ButtonFill'
 import Bubles from '../components/Bubles/Bubles'
 import Draggable from '../components/Draggable/Draggable'
 import ServiceSlider from '../components/ServiceSlider/ServiceSlider'
@@ -101,7 +102,7 @@ const Home = () => {
           </h1>
           <h1
             ref={switchyTwo}
-            className="text-w-red text-4xl font-mulish font-bold"
+            className="text-white text-4xl font-mulish font-bold relative after:content-[' '] after:w-[2px] after:bg-w-pink-2 after:h-[28px] after:relative after:top-[1px] after:inline-block after:ml-1"
           >
             APPS
           </h1>
@@ -114,10 +115,10 @@ const Home = () => {
 
       <Section style={`relative sm:hidden`}>
         <Container
-          style={`flex justify-center items-center h-[400px] relative`}
+          style={`flex justify-center items-center overflow-hidden h-[400px] relative`}
         >
-          <div className="w-[220px] h-[220px] bg-secondary absolute rounded-full blur-[8px] -left-32 bottom-10 animate-pulse-slow"></div>
-          <div className="w-[40px] h-[40px] bg-w-red absolute right-20 top-10 rounded-full blur-sm animate-pulse-fast"></div>
+          <div className="w-[220px] h-[220px] bg-secondary absolute rounded-full blur-[20px] -left-32 bottom-10 animate-pulse-slow"></div>
+          <div className="w-[220px] h-[220px] bg-secondary absolute opacity-50 rounded-full blur-[20px] -right-32 top-10 animate-pulse-slow"></div>
 
           <div className=" w-[100%] relative z-50 flex flex-col justify-center px-6 gap-5 text-primary ">
             <p className="uppercase font-source font-normal text-xl">
@@ -133,20 +134,21 @@ const Home = () => {
 
       <Section style={`bg-primary`}>
         <Container
-          style={`min-h-[600px] p-28 h-full justify-center lg:text-left lg:flex lg:justify-between lg:items-center relative`}
+          style={`min-h-[600px] lg:relative pt-16 lg:p-28 h-full justify-center lg:text-left lg:flex lg:justify-between lg:items-center relative`}
         >
-          <div className="w-[250px] h-[250px] bg-secondary absolute rounded-full blur-xl right-5 bottom-12 animate-pulse-slow"></div>
-          <div className="w-[200px] h-[320px] bg-primary absolute right-12 -bottom-[120px] rounded-xl flex flex-col pt-5 justify-between items-center font-mulish font-bold text-3xl text-white">
-            Reach <br />
-            out <br />
-            to us
-            <Button link="/connect" text="Connect" />
-            <div className="w-[200px] bg-primary h-[100px] relative">
-            </div>
-          </div>
-
           <div className="grid gap-10 text-left w-full sm:grid-cols-2 md:text-left lg:grid-cols-2">
             <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
+              <h1 className="uppercase font-mulish relative text-md font-bold text-white mb-2">
+                Embeded <br /> System{' '}
+                <span className="w-[2px] absolute top-0 bottom-0 left-24 bg-w-pink-2 h-full lg:hidden"></span>
+              </h1>
+              <p className="max-w-[200px] font-source text-base text-white font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                urna sapien. Write stuff here
+              </p>
+            </div>
+
+            <div className="flex flex-col ml-auto lg:ml-0 lg:pl-0 lg:max-w-[220px] 2xl:max-w-[350px]">
               <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
                 Embeded <br /> System
               </h1>
@@ -157,6 +159,17 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
+              <h1 className="uppercase font-mulish relative text-md font-bold text-white mb-2">
+                Embeded <br /> System{' '}
+                <span className="w-[2px] absolute top-0 bottom-0 left-24 bg-w-pink-2 h-full lg:hidden"></span>
+              </h1>
+              <p className="max-w-[200px] font-source text-base text-white font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                urna sapien. Write stuff here
+              </p>
+            </div>
+
+            <div className="flex flex-col ml-auto lg:ml-0 lg:pl-0 lg:max-w-[220px] 2xl:max-w-[350px]">
               <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
                 Embeded <br /> System
               </h1>
@@ -166,27 +179,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
-                Embeded <br /> System
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
-                Embeded <br /> System
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="text-white relative lg:-top-10 sm:col-span-2 sm:text-left lg:col-start-3 lg:max-w-[400px] lg:justify-self-end lg:col-end-5 lg:row-start-1 lg:row-end-3">
+            <div className="text-white hidden relative lg:-top-10 lg:block sm:col-span-2 sm:text-left lg:col-start-3 lg:max-w-[400px] lg:justify-self-end lg:col-end-5 lg:row-start-1 lg:row-end-3">
               <p className="uppercase pl-3 font-lightfont-source text-sm">
                 Join the wayland hub
               </p>
@@ -201,6 +194,16 @@ const Home = () => {
               </p>
             </div>
           </div>
+
+          <div className="mt-10 h-[200px] relative top-[40px] left-0 w-full lg:absolute lg:w-[100%] lg:top-[400px] lg:right-0 lg:max-w-[150px] lg:ml-auto lg:-translate-x-[150%]">
+            <div className="relative w-[200px] h-[200px] relative bg-secondary rounded-full blur-xl mx-auto block animate-pulse-slow lg:mx-0"></div>
+            <div className="w-[90%] lg:w-[200px] p-[24px] mx-auto bg-primary gap-10 -top-[150px] relative rounded-xl flex flex-col pt-5 justify-between items-center font-mulish font-bold text-3xl text-white lg:mx-0">
+              Reach out
+              <br />
+              to us
+              <ButtonFill link="/connect" type="light" text="Connect" />
+            </div>
+          </div>
         </Container>
       </Section>
 
@@ -208,12 +211,12 @@ const Home = () => {
         <Container
           style={`min-h-[600px] h-full justify-center lg:h-full py-28`}
         >
-          <div className="flex flex-col justify-center gap-16 items-center h-full lg:flex-row">
+          <div className="flex flex-col-reverse justify-center gap-16 items-center h-full lg:flex-row">
             <div className="flex flex-col justify-center h-full w-full lg:w-2/4">
-              <h1 className="text-5xl text-w-white font-mulish font-bold leading-[60px]">
+              <h1 className="text-3xl text-w-white font-mulish font-bold leading-[40px]">
                 We are telling the <br /> RIGHT STORIES
               </h1>
-              <p className="font-source text-xl pt-10 max-w-[500px]">
+              <p className="font-source text-md pt-10 max-w-[500px] lg:text-xl">
                 Design web applications and any web-oriented projects. We are
                 ready for projects with already-prepared designs as well as
                 full-circle projects. We are willing to start working on your
@@ -232,9 +235,9 @@ const Home = () => {
 
       <Section style={`bg-primary relative`}>
         <Container
-          style={`overflow-hidden min-h-[600px] h-full lg:h-full flex justify-end`}
+          style={`overflow-hidden min-h-[600px] py-16 h-full lg:h-full flex justify-end`}
         >
-          <div className="absolute -left-10 top-16 opacity-60 lg:opacity-100">
+          <div className="absolute -left-10 opacity-60 lg:opacity-100">
             <Particles quantity={600}></Particles>
             <Image src={Globe}></Image>
           </div>
