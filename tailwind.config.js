@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       screens: {
         xs: '320px',
-        xsm: '400px'
+        xsm: '400px',
+        xsl: '500px'
       },
       keyframes: {
         'fade-in-down': {
@@ -93,7 +94,8 @@ module.exports = {
         'w-red': '#FF5353',
         'w-white': '#ACACAC',
         'w-orange': '#FF8F4A',
-        'w-pink-2': '#FF457E'
+        'w-pink-2': '#FF457E',
+        'w-violet': '#D940C1'
       },
       linearBorderGradients: {
         directions: {

@@ -8,7 +8,7 @@ function Layout({ children }) {
         <Navbar />
         <MobileNavbar/>
         {children}
-        {/* <Footer /> */}
+        <Footer />
     </>
   )
 }

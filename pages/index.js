@@ -257,7 +257,7 @@ const Home = () => {
         </Container>
       </Section>
       <Section>
-        <Container>
+        <Container style='py-8'>
           <h1 className="font-mulish font-bold text-4xl py-8 text-primary">
             News & Insights
           </h1>
@@ -352,13 +352,6 @@ const Home = () => {
                   </p>
                 </Link>
               </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <p className="text-w-red font-mulish font-bold text-lg p-4">
-                DISCOVER
-              </p>
             </div>
           </div>
         </Container>

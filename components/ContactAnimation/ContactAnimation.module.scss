@@ -1,0 +1,53 @@
+.test {
+  animation: scrollBanner infinite 5s;
+}
+
+.blackDots {
+  background-image: radial-gradient(#212121 5%, transparent 20%);
+  background-repeat: no-repeat space;
+  background-size: 10px 10px;
+  background-position: 15px;
+  
+}
+
+.whiteDots {
+  background-image: radial-gradient(#ffffff 20%, transparent 20%);
+  background-repeat: no-repeat space;
+  background-size: 10px 10px;
+  background-position: 15px;
+}
+
+
+.text {
+  animation: visibleText infinite 5s;
+}
+
+@keyframes scrollBanner {
+  0% {
+    top: -35px;
+  }
+  50% {
+    top: 355px;
+  }
+  75% {
+    top: 355px;
+  }
+  100% {
+    top: -35px;
+  }
+}
+
+@keyframes visibleText {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

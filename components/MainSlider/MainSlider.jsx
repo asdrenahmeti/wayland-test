@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './MainSlider.module.scss'
 import Image from 'next/image'
-import Link from 'next/link'
 
 
 const data = [
@@ -55,7 +54,7 @@ const data = [
   ]
 ]
 
-function MainSlider() {
+function MainSlider({showModal}) {
   const [index, setIndex] = useState(0)
   const [jobs, setJobs] = useState(data)
 
@@ -65,6 +64,7 @@ function MainSlider() {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
+
   return (
     <div className={styles.sliderWrapper}>
       {jobs.map((arr, i) => {
@@ -72,11 +72,11 @@ function MainSlider() {
           <div
             key={i}
             className={styles.parent}
-            style={{ zIndex: index === i ? 100 : 1 }}
+            style={{ zIndex: index === i ? 100 : 1, opacity: index === i ? 1 : 0}}
           >
             <div className={styles.dotsContainer}>
               {jobs.map((dot, index) => {
-                return <div key={index}></div>
+                return <div key={index}  style={{ backgroundColor: index === i ? "orangered" : "orange"}}></div>
               })}
             </div>
             <div className={styles.child}>
@@ -93,11 +93,9 @@ function MainSlider() {
                 <p>{arr[0].description}</p>
               </div>
               <h1 className={styles.applyBtn}>
-                <Link href="/">
-                  <a className="underline text-center text-w-red font-source text-sm cursor-pointer lg:text-right">
+                  <a className="underline text-center text-w-red font-source text-sm cursor-pointer lg:text-right"  onClick={()=>showModal(true)}>
                     apply here
                   </a>
-                </Link>
               </h1>
             </div>
             <div className={styles.child}>
@@ -114,11 +112,9 @@ function MainSlider() {
                 <p>{arr[1].description}</p>
               </div>
               <h1 className={styles.applyBtn}>
-                <Link href="/">
-                  <a className="underline text-center text-w-red font-source text-sm cursor-pointer lg:text-right">
+                  <a className="underline text-center text-w-red font-source text-sm cursor-pointer lg:text-right" onClick={()=>showModal(true)}>
                     apply here
                   </a>
-                </Link>
               </h1>
             </div>
           </div>

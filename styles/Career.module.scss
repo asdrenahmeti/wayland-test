@@ -1,0 +1,107 @@
+.cardJoinUs{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    @media screen and (max-width: 1020px){
+      flex-direction: column-reverse;
+      width: 90%;
+    }
+    .titleJoinUs{
+        flex: 1;
+        text-align: center;
+         @media screen and (max-width: 1020px){
+     text-align: left;
+     margin-bottom: 24px;
+    }
+      }
+    .descriptionJoinUs{
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-right: 40px;
+      
+      .descriptionTitle{
+        display: flex;
+        position: absolute;
+        right:-140px;
+        top: -60px;
+        align-items: center;
+        justify-content: space-between;
+        width: 240px;
+        height: 40px;
+        transform: rotate(-90deg);
+        span{
+          display: inline-block;
+          background-color: orange;
+          width: 120px;
+          height: 4px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .titleJoinUs{
+      flex: 1;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 52px;
+      align-items: center;
+    }
+}
+.modalSectionWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 100;
+  .modalSection {
+    background-color: white;
+    width: 96%;
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    position: relative;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+    overflow: clip;
+    div{
+        height: inherit;
+        max-height: 90vh;
+        overflow-y: clip;
+    }
+    .modalLine {
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      bottom: 40px;
+      width: 4px;
+      background-color: orangered;
+      border-radius: 4px;
+    }
+    .closeModalBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      padding-top: 4px;
+      width: 30px;
+      height: 30px;
+      background-color: orangered;
+      text-align: center;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        padding-top: 6px;
+      }
+    }
+  }
+}

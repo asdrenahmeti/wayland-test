@@ -1,40 +1,44 @@
 .sliderWrapper {
   box-sizing: border-box;
-  width: 600px;
-  height: 500px;
+  width: 45%;
+  height: 400px;
   position: relative;
-  background-color: antiquewhite;
   overflow: clip;
-  .dotsContainer{
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 8px;
-      z-index: 1000;
-      div{
-          width: 12px;
-          height: 12px;
-          margin-bottom: 10px;
-          background-color: orange;
-          border-radius: 50%;
-      }
+  @media screen and (max-width: 1020px) {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 100px;
+  }
+  .dotsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    z-index: 1000;
+    div {
+      width: 12px;
+      height: 12px;
+      margin-bottom: 10px;
+      background-color: orange;
+      border-radius: 50%;
+    }
   }
 
   .parent {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: red;
     display: flex;
-    transition: all 1s;
+    transition: opacity 1s;
     flex-direction: column;
+    opacity: 0;
     .child {
+      padding-left: 10px;
       flex: 1;
       display: flex;
       position: relative;
       justify-content: space-evenly;
       align-items: center;
-      background-color: blue;
       .imgContainer {
         width: 140px;
         height: 140px;
@@ -44,7 +48,7 @@
         position: relative;
       }
       .content {
-        width: 400px;
+        width: 300px;
         position: relative;
         h1 {
           font-size: 20px;

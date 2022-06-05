@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-primary font-mulish px-7 py-3 flex justify-between items-center fixed w-full z-50">
+      <nav className="bg-primary font-mulish px-7 py-3 flex justify-between items-center fixed top-0 w-full z-[10000]">
         <Link href="/">
           <a className="relative z-10">
             <Image src={Logo} height={50} width={150} alt="Wayland Logo" />
@@ -59,7 +59,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <Button style='hidden lg:block' link="/connect" text="Connect" />
+        <Button style='hidden lg:block' link="/contact" text="Connect" />
       </nav>
     </>
   )
