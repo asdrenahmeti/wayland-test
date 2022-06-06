@@ -42,7 +42,7 @@ function IndustryV3({industry}) {
           </p>
         </div>
         <div className="relative left-12 ">
-          <Image src={Industries}></Image>
+          <Image src={Industries} alt="Industry image"></Image>
         </div>
       </div>
     </div>

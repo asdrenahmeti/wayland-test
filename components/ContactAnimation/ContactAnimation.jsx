@@ -17,7 +17,7 @@ function ContactAnimation({firstPhrase, secondPhrase, type}) {
         <div
           className={`w-[80px] h-[80px] absolute top-0 -left-[20px] ${styles.test}`}
           ref={black}
-        ><Image src={Arrow} layout="fill"></Image></div>
+        ><Image src={Arrow} layout="fill" alt="Arrow image"></Image></div>
       </div>
 
       <h1 className="font-mulish ml-4 leading-[55px] font-bold text-5xl">

@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-primary font-mulish px-7 py-3 flex justify-between items-center fixed top-0 w-full z-[10000]">
+      <nav className="bg-primary font-mulish px-7 md:px-28 lg:px-28 py-3 flex justify-between items-center fixed top-0 w-full z-[10000]">
         <Link href="/">
           <a className="relative z-10">
             <Image src={Logo} height={50} width={150} alt="Wayland Logo" />

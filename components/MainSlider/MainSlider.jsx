@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import styles from './MainSlider.module.scss'
 import Image from 'next/image'
@@ -56,6 +57,7 @@ const data = [
 
 function MainSlider({showModal}) {
   const [index, setIndex] = useState(0)
+  // eslint-disable-next-line no-unused-vars
   const [jobs, setJobs] = useState(data)
 
   useEffect(() => {

@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react'
 import styles from './Bubles.module.scss'
+
 
 function Bubles({ count, height, width, children }) {
     const [bubles] = useState(Array.from(Array(count).keys()))

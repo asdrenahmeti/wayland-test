@@ -9,7 +9,7 @@ export default function SlideNextButton() {
 
   return (
       <div onClick={() => swiper.slideNext()} className="cursor-pointer">
-      <Image src={ArrowBottom} width={70} height={70}></Image>
+      <Image src={ArrowBottom} width={70} height={70} alt="Slider arrow bottom"></Image>
       </div>
   )
 }

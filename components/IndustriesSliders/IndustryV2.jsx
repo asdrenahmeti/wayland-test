@@ -20,7 +20,7 @@ function IndustryV2({industry}) {
       </div>
 
       <div>
-        <Image src={Industries}></Image>
+        <Image src={Industries} alt="Industry image"></Image>
       </div>
 
       <div className="flex flex-col w-[300px] font-source text-sm font-light gap-4">

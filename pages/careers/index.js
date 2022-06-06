@@ -16,7 +16,7 @@ function Career() {
   }, [])
   return (
     <>
-      <Section style="pt-32 lg:pt-44">
+      <Section style="pt-32 lg:pt-44 h-screen flex">
         <Container style="flex flex-col items-start lg:flex-row justify-between min-h-800 lg:items-center">
           {/* <Container style="flex flex-col gap-0 h-full items-center justify-center xl:flex-row xl:gap-5"> */}
           <div className={styles.cardJoinUs}>

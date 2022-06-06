@@ -1,7 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section/Section'
 import Image from 'next/image'
-import ContactPattern from './../../public/assets/images/contact-pattern.svg'
 import Container from '../../components/Container/Container'
 import Button from '../../components/Button/Button'
 import TabbedContact from '../../components/Tab/TabbedContact'
@@ -25,7 +24,7 @@ function Connect() {
           </div>
           <div className="hidden sm:block">
             <div className="hidden sm:flex sm:justify-end">
-              <Image src={ContactAnimationSvg}></Image>
+              <Image src={ContactAnimationSvg} alt="Rotating circles animation"></Image>
             </div>
 
             <h1 className="font-mulish text-lg font-bold uppercase">Wayland</h1>
@@ -92,7 +91,7 @@ function Connect() {
           <div className="sm:hidden">
             <div className="border-l ml-4 border-w-violet pl-4 py-2 sm:hidden">
               <h1 className="font-mulish font-bold text-2xl pb-2 text-primary">
-                Let's make your project reality
+                Let&apos;s make your project reality
               </h1>
               <p className="font-source font-light text-base text-primary">
                 Weather you’re a client, potential partner, or just want to know
@@ -168,7 +167,7 @@ function Connect() {
           <form className="flex flex-col gap-5 py-10 w-full md:w-[600px]">
             <div className="hidden border-l ml-4 border-w-violet pl-4 py-2 md:block md:border-white">
               <h1 className="font-mulish font-bold text-2xl pb-2 text-primary md:text-white">
-                Let's make your project reality
+                Let&apos;s make your project reality
               </h1>
               <p className="font-source font-light text-base text-primary md:text-white">
                 Weather you’re a client, potential partner, or just want to know

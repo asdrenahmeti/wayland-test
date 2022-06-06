@@ -4,7 +4,7 @@ import {FaArrowsAltV } from 'react-icons/fa'
 
 const Draggable = (props) => {
   // const [canMove, setCanMove] = useState(false);
-  const [y, setY] = useState(0)
+  const [y, setY] = useState(700)
   const [location, setLocation] = useState({ y: -9999 })
 
   const onMouseMove = event => {

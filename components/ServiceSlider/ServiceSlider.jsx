@@ -14,7 +14,7 @@ function ServiceSlider() {
   return (
     <div className="min-h-[200px] flex items-center gap-48 justify-evenly lg:flex-row-reverse lg:justify-end">
       <div className="relative left-3 lg:left-0">
-        <div className="w-[160px] h-[280px] lg:w-[160px] lg:h-[280px] object-cover rounded-xl overflow-hidden -translate-y-2/4 top-0 absolute">
+        <div className="w-[160px] h-[280px] lg:w-[200px] lg:h-[300px] object-cover rounded-xl overflow-hidden -translate-y-2/4 top-0 absolute">
           <div className="w-[30px] h-[30px] rounded-full bg-w-pink-2 absolute bottom-2 right-2 h-[40px] z-50 text-white font-bold flex justify-center items-center text-xl cursor-pointer lg:text-2xl lg:w-[50px] lg:h-[50px]">
             {' '}
             <IoIosArrowForward />{' '}
@@ -25,11 +25,21 @@ function ServiceSlider() {
               {name}
             </p>
           </div>
-          <Image src={image1} layout={'fill'} objectFit="cover"></Image>
+          <Image
+            src={image1}
+            layout={'fill'}
+            objectFit="cover"
+            alt="Industry image"
+          ></Image>
         </div>
 
-        <div className="w-[130px] h-[220px]  lg:w-[160px] lg:h-[280px] object-cover rounded-xl lg:-left-16 overflow-hidden -translate-y-3/4 -left-5 top-32 absolute lg:top-40">
-          <Image src={image2} layout={'fill'} objectFit="cover"></Image>
+        <div className="w-[130px] h-[220px]  lg:w-[200px] lg:h-[300px] object-cover rounded-xl lg:-left-16 overflow-hidden -translate-y-3/4 -left-5 top-32 absolute lg:top-40">
+          <Image
+            src={image2}
+            layout={'fill'}
+            objectFit="cover"
+            alt="Industry image"
+          ></Image>
         </div>
       </div>
 

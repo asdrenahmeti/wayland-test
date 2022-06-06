@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -85,7 +86,12 @@ const Home = () => {
               </h1>
             </div>
             <Bubles count={50} height={600} width={600}>
-              <Image src={HomeRobot} objectFit="contain" layout="fill"></Image>
+              <Image
+                src={HomeRobot}
+                objectFit="contain"
+                layout="fill"
+                alt="Home robot image"
+              ></Image>
             </Bubles>
           </Container>
         </Draggable>
@@ -108,7 +114,12 @@ const Home = () => {
           </h1>
 
           <div className="absolute left-2/4 w-[300px] h-[250px] bottom-[50px] -translate-x-2/4">
-            <Image src={HomeRobot} objectFit="contain" layout="fill"></Image>
+            <Image
+              src={HomeRobot}
+              objectFit="contain"
+              layout="fill"
+              alt="Home robot image"
+            ></Image>
           </div>
         </Container>
       </Section>
@@ -227,7 +238,7 @@ const Home = () => {
               <Button text="Work with us" link="" type="dark"></Button>
             </div>
             <div className="flex flex-col justify-center w-full h-full lg:w-2/4 relative">
-              <Image src={Phone}></Image>
+              <Image src={Phone} alt="Phone animation image"></Image>
             </div>
           </div>
         </Container>
@@ -239,7 +250,7 @@ const Home = () => {
         >
           <div className="absolute -left-10 opacity-60 lg:opacity-100">
             <Particles quantity={600}></Particles>
-            <Image src={Globe}></Image>
+            <Image src={Globe} alt="Globe animation"></Image>
           </div>
 
           <div className="z-30 flex flex-col w-full h-full justify-center gap-12 py-36 lg:w-6/12 gap-20">
@@ -257,13 +268,18 @@ const Home = () => {
         </Container>
       </Section>
       <Section>
-        <Container style='py-8'>
+        <Container style="py-8">
           <h1 className="font-mulish font-bold text-4xl py-8 text-primary">
             News & Insights
           </h1>
           <div className="grid grid-cols-1 gap-4 gap-2 h-auto overflow-hidden sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 ">
             <div className="bg-green-300 min-h-[300px] relative flex items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <Image
+                src={Blog1}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
 
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl">
@@ -271,7 +287,7 @@ const Home = () => {
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 absolute bottom-6">
                     Read blog
                   </p>
@@ -279,14 +295,19 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog2} objectFit="cover" layout="fill"></Image>
+              <Image
+                src={Blog2}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 bottom-6 absolute xl:w-full xl:left-0 xl:bottom-6 xl:text-center">
                     Read blog
                   </p>
@@ -294,14 +315,14 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog3} objectFit="cover" layout="fill"></Image>
+              <Image src={Blog3} objectFit="cover" layout="fill" alt="Blog image"></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 absolute bottom-6">
                     Read blog
                   </p>
@@ -309,14 +330,19 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog4} objectFit="cover" layout="fill"></Image>
+              <Image
+                src={Blog4}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 absolute bottom-6">
                     Read blog
                   </p>
@@ -324,14 +350,19 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog5} objectFit="cover" layout="fill"></Image>
+              <Image
+                src={Blog5}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 bottom-6 absolute xl:w-full xl:left-0 xl:bottom-6 xl:text-center">
                     Read blog
                   </p>
@@ -339,14 +370,19 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog1} objectFit="cover" layout="fill"></Image>
+              <Image
+                src={Blog1}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit.
                 </h2>
 
-                <Link href="">
+                <Link href="/">
                   <p className="text-white font-source font-normal z-50 absolute bottom-6">
                     Read blog
                   </p>

@@ -41,7 +41,7 @@ function IndustryV1({industry}) {
       </div>
 
       <div className="relative">
-        <Image src={Industries}></Image>
+        <Image src={Industries} alt="Industry image"></Image>
       </div>
     </div>
   )

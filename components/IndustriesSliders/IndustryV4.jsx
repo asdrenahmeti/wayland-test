@@ -44,7 +44,7 @@ function IndustryV4({industry}) {
         </div>
 
         <div>
-          <Image src={Industries}></Image>
+          <Image src={Industries} alt="Industry image"></Image>
         </div>
       </div>
     </div>

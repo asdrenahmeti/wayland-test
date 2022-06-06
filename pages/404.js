@@ -15,15 +15,15 @@ function NotFound() {
             Error
           </h1>
           <p className="md:text-2xl md:max-w-[250px] lg:text-2xl lg:max-w-[320px]">
-            What we've got here… is failure to communicate
+            What we&apos;ve got here… is failure to communicate
           </p>
 
           <div className="relative md:absolute md:right-24 md:top-[50%]">
-            <Image src={Error} objectFit="fill"></Image>
+            <Image src={Error} objectFit="fill" alt='Connection error image'></Image>
           </div>
 
           <p className="text-xs font-light md:max-w-[270px] md:text-md lg:w-auto lg:text-base">
-            The page you are looking for doesn't exist or has been moved
+            The page you are looking for doesn&apos;t exist or has been moved
           </p>
 
           <h1 className="md:mt-6 lg:text-xl">

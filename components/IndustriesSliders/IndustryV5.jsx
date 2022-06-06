@@ -9,7 +9,7 @@ function IndustryV5({industry}) {
   return (
     <div className="flex justify-between items-center h-screen">
       <div className="flex">
-        <div className='w-[100px]'>
+        <div className="w-[100px]">
           <SwipePrev></SwipePrev>
           <SwipeNext></SwipeNext>
         </div>
@@ -44,7 +44,7 @@ function IndustryV5({industry}) {
         </div>
 
         <div className="relative left-56">
-          <Image src={Industries}></Image>
+          <Image src={Industries} alt="Industry image"></Image>
         </div>
       </div>
     </div>
