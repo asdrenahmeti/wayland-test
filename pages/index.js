@@ -34,7 +34,7 @@ const Home = () => {
         style={`flex items-center h-screen justify-center lg:block bg-primary`}
       >
         <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
-          <div className="absolute top-[50%] -translate-y-2/4">
+          <div className="absolute top-[45%] lg:top-[50%] -translate-y-2/4">
             <HomeHero></HomeHero>
           </div>
 

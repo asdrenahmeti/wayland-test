@@ -15,24 +15,33 @@ function Connect() {
         <Container
           style={'flex flex-col md:flex-row md:gap-24 md:items-center'}
         >
-          <div>
+          <div className="mb-4 flex items-center sm:mx-auto">
             <ContactAnimation
               firstPhrase="hear"
               secondPhrase="from"
-              type="dark"
+              type="light"
             ></ContactAnimation>
+            <div className="hidden sm:block md:hidden">
+              <Image
+                src={ContactAnimationSvg}
+                alt="Rotating circles animation"
+              ></Image>
+            </div>
           </div>
           <div className="hidden sm:block">
-            <div className="hidden sm:flex sm:justify-end">
-              <Image src={ContactAnimationSvg} alt="Rotating circles animation"></Image>
+            <div className="md:flex sm:hidden sm:justify-end ">
+              <Image
+                src={ContactAnimationSvg}
+                alt="Rotating circles animation"
+              ></Image>
             </div>
 
             <h1 className="font-mulish text-lg font-bold uppercase">Wayland</h1>
             <div className="w-[100%] h-[2px] bg-w-primary"></div>
 
-            <div className="grid grid-rows-2 grid-cols-4">
+            <div className="grid grid-rows-2 grid-cols-4 sm:grid-rows-1 md:grid-cols-2 lg:grid-cols-4">
               <div className="col-span-2 font-source font-light pr-16">
-                <p>
+                <p className="md:mb-4">
                   Weather you’re a client, potential partner, or just want to
                   know more about wayland. We will be happy to talk with you.
                 </p>
@@ -54,7 +63,7 @@ function Connect() {
                   <li>info@wayland.io</li>
                 </ul>
               </div>
-              <div className="col-span-1 font-source font-light mt-8">
+              <div className="col-span-1 font-source font-light mt-8 md:w-[400px">
                 Feel free to reach out if you want to collaborate with us, or
                 simply have a chat
               </div>
@@ -95,7 +104,7 @@ function Connect() {
               </h1>
               <p className="font-source font-light text-base text-primary">
                 Weather you’re a client, potential partner, or just want to know
-                more about wayland. We will be happy to talk with you.
+                more about Wayland. We will be happy to talk with you.
               </p>
             </div>
 
@@ -108,7 +117,7 @@ function Connect() {
               FIND AN OFFICE NEAR YOU
             </h1>
 
-            <div className="xsm:hidden">
+            <div className="xsl:hidden">
               <div className="font-source my-4">
                 <h1 className="text-lg font-semibold mb-4 border-b-2 border-w-red inline-block">
                   North America
@@ -149,7 +158,9 @@ function Connect() {
               </div>
             </div>
 
-            <TabbedContact></TabbedContact>
+            <div className="hidden xsl:block">
+              <TabbedContact></TabbedContact>
+            </div>
           </div>
         </Container>
       </Section>
@@ -171,7 +182,7 @@ function Connect() {
               </h1>
               <p className="font-source font-light text-base text-primary md:text-white">
                 Weather you’re a client, potential partner, or just want to know
-                more about wayland. We will be happy to talk with you.
+                more about Wayland. We will be happy to talk with you.
               </p>
             </div>
             <div className="relative z-0 mb-6 w-full group">

@@ -11,6 +11,8 @@ function ContactAnimation({firstPhrase, secondPhrase, type}) {
         console.log(black.current)
     }, [])
 
+    console.log(dotsType)
+
   return (
     <div className="my-8 w-[280px] h-[400px] flex relative items-center">
       <div className={`${styles[dotsType]} w-[40px] h-[400px]`}>

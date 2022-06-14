@@ -3,18 +3,16 @@
 }
 
 .blackDots {
-  background-image: radial-gradient(#212121 5%, transparent 20%);
-  background-repeat: no-repeat space;
-  background-size: 10px 10px;
-  background-position: 15px;
+  background-image: url("./../../public/assets/backgrounds/contact-dots-dark.svg");
+  background-repeat: repeat-y;
+  background-position: 37px;
   
 }
 
 .whiteDots {
-  background-image: radial-gradient(#ffffff 20%, transparent 20%);
-  background-repeat: no-repeat space;
-  background-size: 10px 10px;
-  background-position: 15px;
+  background-image: url("./../../public/assets/backgrounds/contact-dots-light.svg");
+  background-repeat: repeat-y;
+  background-position: 37px;
 }
 
 

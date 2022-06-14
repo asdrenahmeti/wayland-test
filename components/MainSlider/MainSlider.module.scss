@@ -4,6 +4,8 @@
   height: 400px;
   position: relative;
   overflow: clip;
+  box-shadow: 3px 3px 11px -4px rgba(69, 79, 89, 0.08);
+  border-radius: 8px;
   @media screen and (max-width: 1020px) {
     width: 90%;
     max-width: 600px;

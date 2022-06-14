@@ -16,19 +16,20 @@ function Career() {
   }, [])
   return (
     <>
-      <Section style="pt-32 lg:pt-44 h-screen flex">
+      <Section style="pt-32 pb-16 lg:h-screen flex lg:pt-44">
         <Container style="flex flex-col items-start lg:flex-row justify-between min-h-800 lg:items-center">
           {/* <Container style="flex flex-col gap-0 h-full items-center justify-center xl:flex-row xl:gap-5"> */}
           <div className={styles.cardJoinUs}>
             <div className={styles.descriptionJoinUs}>
-              <p className={styles.descriptionText}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis iure maiores est fuga tempore delectus iste temporibus
-                vitae! Debitis suscipit at eligendi hic fugit alias numquam ex
-                id aut cum? Eget viverra pellentesque habitasse nisl felis cras
-                hendrerit integer nec. Quam ac risus nec sed nisi.
+              <p className={`${styles.descriptionText} font-source text-primary tracking-tighter`}>
+                At Wayland, you are part of a world class innovation team from
+                your first day. We provide a collaborative working space with
+                support, mentoring, and guidance as you grow in your career. We
+                are also creative, high-performing community both inside - and
+                outside - of the office. We care about each other and the cities
+                where we live. You can make a difference here. Interested?
               </p>
-              <p className={styles.descriptionTitle}>
+              <p className={`${styles.descriptionTitle} uppercase text-w-gray font-source`}>
                 <span></span> Apply Now
               </p>
             </div>
@@ -61,7 +62,7 @@ function Career() {
       </Section>
 
       {showModal && (
-        <div className={styles.modalSectionWrapper}>
+        <div className={`${styles.modalSectionWrapper} scrollbar-hide`}>
           <div className={styles.modalSection}>
             <h1
               onClick={() => setShowModal(false)}
@@ -69,15 +70,15 @@ function Career() {
             >
               X
             </h1>
-            <div className={styles.modalLine}></div>
-            <div className="hidden sm:flex w-1/5 md:w-1/2 h-full flex-col justify-evenly">
-              {Array.from(new Array(7), (val, i) => {
+            <div className={`${styles.modalLine} ${showModal?styles.show:false}`}></div>
+            <div className="hidden sm:flex w-3/5 md:w-1/2 h-full flex-col justify-evenly">
+              {Array.from(new Array(9), (val, i) => {
                 return (
                   <h1
                     key={i}
-                    className="pl-2 md:pl-16 font-source text-7xl md:text-9xl font-black text-w-gray"
+                    className="pl-2 md:pl-16 font-source text-8xl md:text-9xl font-black text-w-gray text-center"
                     style={{
-                      color: index === i ? 'orangered' : 'gray'
+                      color: index === i ? '#FF5353' : 'rgba(132,132,131, 0.2)'
                     }}
                   >
                     Join
@@ -85,7 +86,9 @@ function Career() {
                 )
               })}
             </div>
-            <div className="pl-0 w-4/5 md:w-1/2 flex h-full items-start flex-col font-source justify-center sm:pl-20 ">
+            <div
+              className={`${styles.applyDetails} pl-12 sm:pl-0 w-full z-10 md:w-1/2 flex h-full flex-col font-source justify-start `}
+            >
               <h1 className="text-4xl font-semibold mb-3">Senior Developer</h1>
               <p className="text-lg font-bold whitespace-nowrap">
                 Senior Developer Responsibilities
@@ -125,10 +128,9 @@ function Career() {
                   info@wayland.io
                 </span>
               </p>
-
-              <button className="bg-w-red text-white font-bold text-xl px-10 py-5 mt-5">
-                contact@wayland.io
-              </button>
+            <button className="bg-w-red w-full sm:left- text-white absolute font-bold text-xl px-10 py-5 mt-5 bottom-0 right-0 z-50">
+              contact@wayland.io
+            </button>
             </div>
           </div>
         </div>
