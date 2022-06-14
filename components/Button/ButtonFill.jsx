@@ -2,10 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 
 function Button({ style, link, type, text }) {
+  console.log(type)
   return (
     <Link href={link}>
       <a
-        className={`${style} font-mulish font-bold text-sm uppercase px-5 py-2.5 border-transparent border-solid border-2 rounded-lg group overflow-hidden flex justify-center relative ${
+        className={`${style} font-mulish font-bold text-sm uppercase px-5 py-2.5 border-transparent border-solid border-2 rounded-lg group overflow-hidden flex justify-center relative 
+         ${type === 'light' && 'text-primary bg-red-400'} ${
           type === 'dark'
             ? 'text-primary border-gradient-br-primary-dark'
             : 'text-white border-gradient-br-primary-light'

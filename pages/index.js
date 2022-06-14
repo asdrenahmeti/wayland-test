@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -7,238 +7,218 @@ import Section from '../components/Section/Section'
 import Container from '../components/Container/Container'
 import Globe from '../public/assets/images/globe.svg'
 import Phone from '../public/assets/phone-animation.svg'
-import HomeRobot from '../public/assets/images/home-robot.svg'
 import Button from '../components/Button/Button'
 import ButtonFill from '../components/Button/ButtonFill'
-import Bubles from '../components/Bubles/Bubles'
-import Draggable from '../components/Draggable/Draggable'
+
 import ServiceSlider from '../components/ServiceSlider/ServiceSlider'
 import Blog1 from '../public/assets/blogs/blog-1.jpg'
 import Blog2 from '../public/assets/blogs/blog-2.jpg'
 import Blog3 from '../public/assets/blogs/blog-3.jpg'
 import Blog4 from '../public/assets/blogs/blog-4.jpg'
 import Blog5 from '../public/assets/blogs/blog-5.jpg'
+import LevelIcon from '../public/assets/icons/custom-1.svg'
 import Particles from '../components/Particles/Particles'
+import { motion } from 'framer-motion'
 
 const Home = () => {
-  let texts = ['APPS', 'SOFTWARE', 'WORLD']
-  let count = 0
-  let index = 0
-  let currentText = ''
-  let fullText = ''
-  let action = true
-  const switchyOne = useRef()
-  const switchyTwo = useRef()
-
-  const type = () => {
-    if (action) {
-      if (count === texts.length) {
-        count = 0
-      }
-      fullText = texts[count]
-      currentText = fullText.slice(0, ++index)
-
-      switchyOne.current.innerHTML = currentText
-      switchyTwo.current.innerHTML = currentText
-      if (currentText.length === fullText.length) {
-        action = false
-      }
-    } else {
-      currentText = fullText.slice(0, --index)
-      switchyOne.current.innerHTML = currentText
-      switchyTwo.current.innerHTML = currentText
-      if (currentText.length === 0) {
-        count++
-        index = 0
-        action = true
-      }
-    }
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      type()
-    }, 200)
-
-    return () => clearInterval(interval) // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  })
-
+  
   return (
     <>
       <Head>
         <title> Wayland | Home</title>
       </Head>
 
-      <Section style={`hidden lg:block`}>
-        <Draggable>
-          <Container
-            style={`min-h-[600px] h-[85vh] relative justify-center lg:text-left lg:flex lg:justify-between lg:items-center`}
+      <Section
+        style={`flex items-center h-screen justify-center lg:block bg-primary`}
+      >
+        <Container style="pt-12 h-full flex flex-col items-center justify-center relative">
+          <div className="absolute w-full top-[50%] -translate-y-2/4 left-[50%] -translate-x-2/4"></div>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {
+                scale: 0.8,
+                opacity: 0,
+                y: -200
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 1.3,
+                  duration: 2
+                }
+              }
+            }}
           >
-            <div className="flex gap-3 flex-1 absolute -translate-y-1/2 z-50">
-              <h1 className="text-white text-4xl font-mulish font-bold">
-                BUILDING BETTER
-              </h1>
-              <h1
-                ref={switchyOne}
-                className="text-w-red text-4xl font-mulish font-bold"
-              >
-                APPS
-              </h1>
-            </div>
-            <Bubles count={50} height={600} width={600}>
-              <Image
-                src={HomeRobot}
-                objectFit="contain"
-                layout="fill"
-                alt="Home robot image"
-              ></Image>
-            </Bubles>
-          </Container>
-        </Draggable>
-      </Section>
-
-      <Section style={`h-[550px] block bg-primary lg:hidden`}>
-        <Container
-          style={`h-[550px] relative py-28 px-6 bg-primary relative justify-center lg:text-left lg:flex lg:justify-between lg:items-center`}
-        >
-          <h1 className="text-white text-4xl font-mulish font-bold">
-            BUILDING
-            <br />
-            BETTER
-          </h1>
-          <h1
-            ref={switchyTwo}
-            className="text-white text-4xl font-mulish font-bold relative after:content-[' '] after:w-[2px] after:bg-w-pink-2 after:h-[28px] after:relative after:top-[1px] after:inline-block after:ml-1"
-          >
-            APPS
-          </h1>
-
-          <div className="absolute left-2/4 w-[300px] h-[250px] bottom-[50px] -translate-x-2/4">
-            <Image
-              src={HomeRobot}
-              objectFit="contain"
-              layout="fill"
-              alt="Home robot image"
-            ></Image>
-          </div>
-        </Container>
-      </Section>
-
-      <Section style={`relative sm:hidden`}>
-        <Container
-          style={`flex justify-center items-center overflow-hidden h-[400px] relative`}
-        >
-          <div className="w-[220px] h-[220px] bg-secondary absolute rounded-full blur-[20px] -left-32 bottom-10 animate-pulse-slow"></div>
-          <div className="w-[220px] h-[220px] bg-secondary absolute opacity-50 rounded-full blur-[20px] -right-32 top-10 animate-pulse-slow"></div>
-
-          <div className=" w-[100%] relative z-50 flex flex-col justify-center px-6 gap-5 text-primary ">
-            <p className="uppercase font-source font-normal text-xl">
-              Join the wayland hub
-            </p>
-
-            <h1 className="font-mulish uppercase font-bold text-2xl">
-              LET US TAKE YOUR BUSINESS TO NEW LEVELS
+            <h1 className="uppercase leading-normal text-center text-white text-5xl font-bold relative z-[50]">
+              Let&apos;s dive together <br /> into digital magic
             </h1>
-          </div>
+          </motion.div>
+
+          <Button text="Work with us" link="" type="red"></Button>
         </Container>
       </Section>
 
-      <Section style={`bg-primary`}>
+      <Section style={`bg-white`}>
         <Container
-          style={`min-h-[600px] lg:relative pt-16 lg:p-28 h-full justify-center lg:text-left lg:flex lg:justify-between lg:items-center relative`}
+          style={`min-h-[600px] z-100 lg:relative lg:max-h-[700px] py-[50px] md:py-[100px] lg:p-28 h-full justify-center lg:text-left lg:pt-14 lg:flex lg:justify-between lg:items-center relative`}
         >
-          <div className="grid gap-10 text-left w-full sm:grid-cols-2 md:text-left lg:grid-cols-2">
-            <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish relative text-md font-bold text-white mb-2">
-                Embeded <br /> System{' '}
-                <span className="w-[2px] absolute top-0 bottom-0 left-24 bg-w-pink-2 h-full lg:hidden"></span>
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="flex flex-col ml-auto lg:ml-0 lg:pl-0 lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
-                Embeded <br /> System
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="flex flex-col lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish relative text-md font-bold text-white mb-2">
-                Embeded <br /> System{' '}
-                <span className="w-[2px] absolute top-0 bottom-0 left-24 bg-w-pink-2 h-full lg:hidden"></span>
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="flex flex-col ml-auto lg:ml-0 lg:pl-0 lg:max-w-[220px] 2xl:max-w-[350px]">
-              <h1 className="uppercase font-mulish text-md font-bold text-white mb-2">
-                Embeded <br /> System
-              </h1>
-              <p className="max-w-[200px] font-source text-base text-white font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                urna sapien. Write stuff here
-              </p>
-            </div>
-
-            <div className="text-white hidden relative lg:-top-10 lg:block sm:col-span-2 sm:text-left lg:col-start-3 lg:max-w-[400px] lg:justify-self-end lg:col-end-5 lg:row-start-1 lg:row-end-3">
-              <p className="uppercase pl-3 font-lightfont-source text-sm">
+          <div className="mb-[50px] relative order-1 sm:w-full md:mb-[150px] lg:order-2 lg:mb-0 lg:max-w-[400px]">
+            <div className="z-[20] relative">
+              <p className="uppercase font-source text-primary font-light">
                 Join the wayland hub
               </p>
-              <h1 className="uppercase pl-3 font-mulish my-5 text-3xl font-bold">
-                Let us take your business to new <br /> level
+              <h1 className="uppercase text-2xl md:text-4xl font-mulish font-bold leading-relaxed relative">
+                Take your <br /> business to new <br /> levels
               </h1>
-              <p className="border-l-2 pl-3 border-w-red h-[40px] font-source text-sm text-normal">
+              <p className="font-source text-primary font-light">
                 Wayland R&D is pursued so that research and education go hand in
                 hand and where knowledge is contextually based on latest
                 technologies and experience where engineers and trainers with an
                 innovative attitude exchange and compare perspectives.
               </p>
-            </div>
-          </div>
 
-          <div className="mt-10 h-[200px] relative top-[40px] left-0 w-full lg:absolute lg:w-[100%] lg:top-[400px] lg:right-0 lg:max-w-[150px] lg:ml-auto lg:-translate-x-[150%]">
-            <div className="relative w-[200px] h-[200px] relative bg-secondary rounded-full blur-xl mx-auto block animate-pulse-slow lg:mx-0"></div>
-            <div className="w-[90%] lg:w-[200px] p-[24px] mx-auto bg-primary gap-10 -top-[150px] relative rounded-xl flex flex-col pt-5 justify-between items-center font-mulish font-bold text-3xl text-white lg:mx-0">
-              Reach out
-              <br />
-              to us
-              <ButtonFill link="/connect" type="light" text="Connect" />
+              <ButtonFill type="light" style="max-w-[130px] mt-6 bg-blue-300" link="/contact" text="Connect" />
             </div>
+            <div className="w-[150px] h-[150px] lg:w-[220px] lg:h-[220px] bg-secondary absolute rounded-full blur-[20px] top-0 left-20 md:left-16 md:-top-[50px] lg:left-[150px] lg:-top-[30px] z-[10] animate-pulse-slow"></div>
           </div>
-        </Container>
-      </Section>
-
-      <Section style={``}>
-        <Container
-          style={`min-h-[600px] h-full justify-center lg:h-full py-28`}
-        >
-          <div className="flex flex-col-reverse justify-center gap-16 items-center h-full lg:flex-row">
-            <div className="flex flex-col justify-center h-full w-full lg:w-2/4">
-              <h1 className="text-3xl text-w-white font-mulish font-bold leading-[40px]">
-                We are telling the <br /> RIGHT STORIES
-              </h1>
-              <p className="font-source text-md pt-10 max-w-[500px] lg:text-xl">
-                Design web applications and any web-oriented projects. We are
-                ready for projects with already-prepared designs as well as
-                full-circle projects. We are willing to start working on your
-                web idea. <span className="font-bold">With Wayland</span> you
-                can also develop iOS and Android applications based on Java
-                technologies.
-              </p>
-              <Button text="Work with us" link="" type="dark"></Button>
+          <div className="flex flex-col gap-3 relative order-2 md:flex-row lg:flex-row lg:order-1">
+            <div className="gap-4 flex flex-col relative md:-top-[100px] lg:-top-[30px]">
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {
+                    scale: 0.8,
+                    opacity: 0
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.5
+                    }
+                  }
+                }}
+              >
+                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                  <div className="flex relative">
+                    <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
+                      Embeded <br /> System
+                    </h1>
+                    <div className="absolute right-0 -top-10">
+                      <Image src={LevelIcon} alt="Level icon" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-w-gray font-light font-source">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus urna sapien. Write stuff here
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {
+                    scale: 0.8,
+                    opacity: 0
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7
+                    }
+                  }
+                }}
+              >
+                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-4 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                  <div className="flex relative">
+                    <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
+                      Brand <br /> Marketing
+                    </h1>
+                    <div className="absolute right-0 -top-10">
+                      <Image src={LevelIcon} alt="Level icon" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-w-gray font-light font-source">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus urna sapien. Write stuff here
+                  </p>
+                </div>
+              </motion.div>
             </div>
-            <div className="flex flex-col justify-center w-full h-full lg:w-2/4 relative">
-              <Image src={Phone} alt="Phone animation image"></Image>
+            <div className="gap-4 flex flex-col relative z-[50] lg:-bottom-[80px] ">
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {
+                    scale: 0.8,
+                    opacity: 0
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.9
+                    }
+                  }
+                }}
+              >
+                <div className="flex flex-col shadow-lg rounded-lg z-[50] w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                  <div className="flex relative">
+                    <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
+                      Custom <br /> Software
+                    </h1>
+                    <div className="absolute right-0 -top-10">
+                      <Image src={LevelIcon} alt="Level icon" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-w-gray font-light font-source">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus urna sapien. Write stuff here
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div
+                exit={{ opacity: 0 }}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {
+                    scale: 0.8,
+                    opacity: 0
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: 1.1
+                    }
+                  }
+                }}
+              >
+                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                  <div className="flex relative">
+                    <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
+                      App <br /> Development
+                    </h1>
+                    <div className="absolute right-0 -top-10">
+                      <Image src={LevelIcon} alt="Level icon" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-w-gray font-light font-source">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus urna sapien. Write stuff here
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </Container>
@@ -267,6 +247,33 @@ const Home = () => {
           </div>
         </Container>
       </Section>
+
+      <Section style={``}>
+        <Container
+          style={`min-h-[600px] h-full justify-center lg:h-full py-28`}
+        >
+          <div className="flex flex-col-reverse justify-center gap-16 items-center h-full lg:flex-row">
+            <div className="flex flex-col justify-center h-full w-full text-center lg:text-left lg:w-2/4">
+              <h1 className="text-3xl text-w-white font-mulish font-bold leading-[40px]">
+                We are telling the <br /> RIGHT STORIES
+              </h1>
+              <p className="font-source text-md pt-10 lg:max-w-[500px] lg:text-xl">
+                Design web applications and any web-oriented projects. We are
+                ready for projects with already-prepared designs as well as
+                full-circle projects. We are willing to start working on your
+                web idea. <span className="font-bold">With Wayland</span> you
+                can also develop iOS and Android applications based on Java
+                technologies.
+              </p>
+              <Button text="Work with us" link="" type="dark"></Button>
+            </div>
+            <div className="flex flex-col justify-center w-full lg:h-full lg:w-2/4 relative">
+              <Image src={Phone} alt="Phone animation image"></Image>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       <Section>
         <Container style="py-8">
           <h1 className="font-mulish font-bold text-4xl py-8 text-primary">
@@ -315,7 +322,12 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
-              <Image src={Blog3} objectFit="cover" layout="fill" alt="Blog image"></Image>
+              <Image
+                src={Blog3}
+                objectFit="cover"
+                layout="fill"
+                alt="Blog image"
+              ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
                   Title of news: Lorem ipsum dolor sit amet, consectetur

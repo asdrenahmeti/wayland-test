@@ -110,11 +110,13 @@ module.exports = {
           tl: 'to top left'
         },
         colors: {
-          primary: ['#FF5177', '#FF8850']
+          primary: ['#FF5177', '#FF8850'],
+          light: ['#ffffff', '#ffffff'],
         },
         background: {
           light: '#222324',
-          dark: '#222324'
+          dark: '#222324',
+          lighty: '#ffffff',
         },
         borders: {
           // defaults to these values (optional)
