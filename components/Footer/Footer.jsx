@@ -13,28 +13,32 @@ function Footer() {
   return (
     <footer className={`${styles.footer} bg-black text-white py-8`}>
       <Container style="flex flex-col gap-5 w-full justify-between items-center lg:flex-row">
-        <div>
+        <div className="flex flex-col justify-center items-center">
           <Link href="/" passHref={true}>
             <a>
               <Image src={LogoOnly} width={90} height={90} alt="Wayland Logo" />
             </a>
           </Link>
+
+          <p className="underline font-bold font-source text-md mt-4">hello@wayland.io</p>
         </div>
 
         <div className="flex flex-col gap-4 justify-center text-left">
-          <h1 className="font-mulish text-4xl font-extrabold text-center pb-5 lg:text-left">GOOD TALKS</h1>
+          <h1 className="font-mulish text-4xl font-extrabold uppercase text-center pb-5 lg:text-left">
+            Building Better.
+          </h1>
           <div className="flex flex-row flex-wrap gap-16 items-center">
-            {FooterItems.map((item) => (
+            {FooterItems.map(item => (
               <div
                 className="flex flex-col font-source text-sm uppercase gap-2"
                 key={item.id}
               >
                 {item.items?.map((subItem, index) => (
                   <Link
-                    href={`/${subItem.replace(/\s+/g, '-').toLowerCase()}`}
+                    href={`/${subItem.link}`}
                     key={index}
                   >
-                    <a>{subItem.toUpperCase()}</a>
+                    <a>{subItem.name.toUpperCase()}</a>
                   </Link>
                 ))}
               </div>

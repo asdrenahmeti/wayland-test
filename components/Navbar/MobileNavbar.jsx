@@ -1,6 +1,6 @@
 import React from 'react'
 import NavItems from './NavItems'
-import {AiOutlineRight} from 'react-icons/ai'
+// import {AiOutlineRight} from 'react-icons/ai'
 import {IoClose} from "react-icons/io5";
 import styles from './MobileNavbar.module.scss'
 import { useGlobalContext } from './../context'
@@ -30,14 +30,14 @@ function MobileNavbar() {
               <div className="h-0.5 w-100 mt-2 mb-2 bg-black mt-1 bg-gradient-to-r from-secondary to-quarternary"></div>
 
               <div className="flex flex-wrap pl-4">
-                {nav.subs.map((sub, index) => {
+                {/* {nav.subs.map((sub, index) => {
                   return (
                     <p key={index} className="text-white w-3/6 uppercase pb-1">
                       <AiOutlineRight className="inline-block text-w-pink mr-2" />
                       {sub}
                     </p>
                   )
-                })}
+                })} */}
               </div>
             </div>
           )

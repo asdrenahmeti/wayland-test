@@ -111,12 +111,11 @@ module.exports = {
         },
         colors: {
           primary: ['#FF5177', '#FF8850'],
-          light: ['#ffffff', '#ffffff'],
+          light: ['#FF5177', '#FF8850']
         },
         background: {
-          light: '#222324',
-          dark: '#222324',
-          lighty: '#ffffff',
+          light: '#ffffff',
+          dark: '#222324'
         },
         borders: {
           // defaults to these values (optional)

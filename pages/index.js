@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/link-passhref */
 import React from 'react'
 import Image from 'next/image'
@@ -19,6 +20,7 @@ import Blog5 from '../public/assets/blogs/blog-5.jpg'
 import LevelIcon from '../public/assets/icons/custom-1.svg'
 import Particles from '../components/Particles/Particles'
 import { motion } from 'framer-motion'
+import HomeHero from '../components/HomeHero/HomeHero'
 
 const Home = () => {
   
@@ -31,8 +33,10 @@ const Home = () => {
       <Section
         style={`flex items-center h-screen justify-center lg:block bg-primary`}
       >
-        <Container style="pt-12 h-full flex flex-col items-center justify-center relative">
-          <div className="absolute w-full top-[50%] -translate-y-2/4 left-[50%] -translate-x-2/4"></div>
+        <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
+          <div className="absolute top-[50%] -translate-y-2/4">
+            <HomeHero></HomeHero>
+          </div>
 
           <motion.div
             initial="hidden"
@@ -54,7 +58,7 @@ const Home = () => {
               }
             }}
           >
-            <h1 className="uppercase leading-normal text-center text-white text-5xl font-bold relative z-[50]">
+            <h1 className="uppercase leading-normal text-center text-white text-4xl font-bold relative z-[50] lg:text-5xl">
               Let&apos;s dive together <br /> into digital magic
             </h1>
           </motion.div>
@@ -69,22 +73,29 @@ const Home = () => {
         >
           <div className="mb-[50px] relative order-1 sm:w-full md:mb-[150px] lg:order-2 lg:mb-0 lg:max-w-[400px]">
             <div className="z-[20] relative">
+              <div className="w-[3px] h-[54px] absolute -left-2 top-[5px] bg-gradient-to-b from-[#FF457E] to-[#B53BFF] opacity-80"></div>
               <p className="uppercase font-source text-primary font-light">
                 Join the wayland hub
               </p>
               <h1 className="uppercase text-2xl md:text-4xl font-mulish font-bold leading-relaxed relative">
                 Take your <br /> business to new <br /> levels
               </h1>
-              <p className="font-source text-primary font-light">
-                Wayland R&D is pursued so that research and education go hand in
-                hand and where knowledge is contextually based on latest
-                technologies and experience where engineers and trainers with an
-                innovative attitude exchange and compare perspectives.
+              <p className="font-source text-primary font-light mt-3">
+                At Wayland, we are Building Better - from smart technologies for
+                rural medicine and cleantech, to world-class medical robotics
+                and AI applications. Together with partners like you, our
+                mission is to unite the world’s technologies and make them
+                accessible and useful to people everywhere. How can we help you?
               </p>
 
-              <ButtonFill type="light" style="max-w-[130px] mt-6 bg-blue-300" link="/contact" text="Connect" />
+              <ButtonFill
+                type="light"
+                style="max-w-[130px] mt-6 mx-auto md:mx-0"
+                link="/contact"
+                text="Connect"
+              />
             </div>
-            <div className="w-[150px] h-[150px] lg:w-[220px] lg:h-[220px] bg-secondary absolute rounded-full blur-[20px] top-0 left-20 md:left-16 md:-top-[50px] lg:left-[150px] lg:-top-[30px] z-[10] animate-pulse-slow"></div>
+            <div className="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] bg-secondary absolute rounded-full blur-[20px] top-2 right-0 md:left-16 md:-top-[50px] lg:left-[150px] lg:-top-[30px] z-[10] animate-pulse-slow"></div>
           </div>
           <div className="flex flex-col gap-3 relative order-2 md:flex-row lg:flex-row lg:order-1">
             <div className="gap-4 flex flex-col relative md:-top-[100px] lg:-top-[30px]">
@@ -108,15 +119,15 @@ const Home = () => {
                 <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
-                      Embeded <br /> System
+                      Embedded <br /> Systems
                     </h1>
                     <div className="absolute right-0 -top-10">
                       <Image src={LevelIcon} alt="Level icon" />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus urna sapien. Write stuff here
+                    Designing code worthy of the surgical robotics and aviation
+                    systems through Wayland embedded.
                   </p>
                 </div>
               </motion.div>
@@ -140,20 +151,20 @@ const Home = () => {
                 <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-4 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
-                      Brand <br /> Marketing
+                      Machine <br /> Learning
                     </h1>
                     <div className="absolute right-0 -top-10">
                       <Image src={LevelIcon} alt="Level icon" />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus urna sapien. Write stuff here
+                    Mobilize your data to create continuously smarter and more
+                    valuable insights and applications.
                   </p>
                 </div>
               </motion.div>
             </div>
-            <div className="gap-4 flex flex-col relative z-[50] lg:-bottom-[80px] ">
+            <div className="gap-4 flex flex-col relative z-[50] lg:-bottom-[110px] ">
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -174,15 +185,16 @@ const Home = () => {
                 <div className="flex flex-col shadow-lg rounded-lg z-[50] w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
-                      Custom <br /> Software
+                      App
+                      <br /> Development
                     </h1>
                     <div className="absolute right-0 -top-10">
                       <Image src={LevelIcon} alt="Level icon" />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus urna sapien. Write stuff here
+                    Wayland builds better apps. Intuitive, beautiful, and
+                    well-crafted code for web, mobile, and desktop.
                   </p>
                 </div>
               </motion.div>
@@ -207,15 +219,15 @@ const Home = () => {
                 <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
-                      App <br /> Development
+                      Devops
                     </h1>
                     <div className="absolute right-0 -top-10">
                       <Image src={LevelIcon} alt="Level icon" />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus urna sapien. Write stuff here
+                    Deploying better to make your move to market secure,
+                    well-tested, and responsive to feedback.
                   </p>
                 </div>
               </motion.div>
@@ -239,7 +251,7 @@ const Home = () => {
                 Our <br /> Industries
               </h1>
               <p className="font-mulish font-bold text-2xl text-w-white">
-                Solving complex digital transformation.
+                Making digital transformation work for you.
               </p>
             </div>
 
@@ -250,22 +262,26 @@ const Home = () => {
 
       <Section style={``}>
         <Container
-          style={`min-h-[600px] h-full justify-center lg:h-full py-28`}
+          style={`min-h-[600px] h-full justify-center lg:h-full py-28 pb-0`}
         >
           <div className="flex flex-col-reverse justify-center gap-16 items-center h-full lg:flex-row">
             <div className="flex flex-col justify-center h-full w-full text-center lg:text-left lg:w-2/4">
-              <h1 className="text-3xl text-w-white font-mulish font-bold leading-[40px]">
-                We are telling the <br /> RIGHT STORIES
+              <h1 className="text-3xl text-w-white font-mulish font-bold uppercase leading-[40px]">
+                Custom Software
               </h1>
               <p className="font-source text-md pt-10 lg:max-w-[500px] lg:text-xl">
-                Design web applications and any web-oriented projects. We are
-                ready for projects with already-prepared designs as well as
-                full-circle projects. We are willing to start working on your
-                web idea. <span className="font-bold">With Wayland</span> you
-                can also develop iOS and Android applications based on Java
-                technologies.
+                Deploy web applications, mobile apps (iOS & Android) and
+                web-oriented projects on time and budget with a custom team from
+                Wayland. You have options - either provide your own architecture
+                and UI or our talented design team can create one for you. The
+                market won't wait - let's move now.
               </p>
-              <Button text="Work with us" link="" type="dark"></Button>
+              <Button
+                style="max-w-[200px] mx-auto lg:mx-0"
+                text="Work with us"
+                link=""
+                type="dark"
+              ></Button>
             </div>
             <div className="flex flex-col justify-center w-full lg:h-full lg:w-2/4 relative">
               <Image src={Phone} alt="Phone animation image"></Image>

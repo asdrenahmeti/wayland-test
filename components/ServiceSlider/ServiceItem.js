@@ -1,44 +1,44 @@
-// eslint-disable-next-line no-unused-vars
+import RoboticsOne from './../../public/assets/service-silder/robotics-1.jpg'
+import RoboticsTwo from './../../public/assets/service-silder/robotics-2.jpg'
+import EducationOne from './../../public/assets/service-silder/education-1.jpg'
+import EducationTwo from './../../public/assets/service-silder/education-2.jpg'
+import DataminingOne from './../../public/assets/service-silder/datamining-1.jpg'
+import DataminingTwo from './../../public/assets/service-silder/datamining-2.jpg'
+import HealthcareOne from './../../public/assets/service-silder/healthcare-1.jpg'
+import HealthcareTwo from './../../public/assets/service-silder/healthcare-2.jpg'
+import CybersecurityOne from './../../public/assets/service-silder/cybersecurity-1.jpg'
+import CybersecurityTwo from './../../public/assets/service-silder/cybersecurity-2.jpg'
+
 const SilderItems = [
   {
     id: 1,
     name: 'Robotics',
-    image1:
-      'https://images.unsplash.com/photo-1652835806001-78c01541a265?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140',
-    image2:
-      'https://images.unsplash.com/photo-1652845983031-4981f42de9dd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140'
+    image1: RoboticsOne,
+    image2: RoboticsTwo
   },
   {
     id: 2,
     name: 'Education',
-    image2:
-      'https://images.unsplash.com/photo-1652835806001-78c01541a265?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140',
-    image1:
-      'https://images.unsplash.com/photo-1652845983031-4981f42de9dd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140'
+    image1: EducationOne,
+    image2: EducationTwo
   },
   {
     id: 3,
     name: 'Healthcare',
-    image2:
-      'https://images.unsplash.com/photo-1652835806001-78c01541a265?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140',
-    image1:
-      'https://images.unsplash.com/photo-1652845983031-4981f42de9dd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140'
+    image2: HealthcareOne,
+    image1: HealthcareTwo
   },
   {
     id: 4,
     name: 'Cybersecurity',
-    image2:
-      'https://images.unsplash.com/photo-1652835806001-78c01541a265?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140',
-    image1:
-      'https://images.unsplash.com/photo-1652845983031-4981f42de9dd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140'
+    image2: CybersecurityTwo,
+    image1: CybersecurityOne
   },
   {
     id: 5,
     name: 'Data Mining',
-    image2:
-      'https://images.unsplash.com/photo-1652835806001-78c01541a265?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140',
-    image1:
-      'https://images.unsplash.com/photo-1652845983031-4981f42de9dd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=140'
+    image2: DataminingTwo,
+    image1: DataminingOne
   }
 ]
 

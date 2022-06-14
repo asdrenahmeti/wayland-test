@@ -52,23 +52,25 @@ function Navbar() {
                     <p className="text-light font-light">{nav.desc}</p>
                   </div>
                   <ul className="flex flex-row -top-6 relative">
-                    {nav.subs.map((sub, index) => (
+                    {nav.subs.map((sub, index) => {
+                      return (                
                       <Link
-                        href={`/${sub.replace(/\s+/g, '-').toLowerCase()}`}
+                        href={`/${sub.link}`}
                         key={index}
                       >
                         <a className="text-primary mr-10 font-mulish font-normal text-base flex items-center">
                           <AiOutlineRight className="inline-block text-w-pink mr-2" />
-                          {sub.toUpperCase()}
+                          {sub.name.toUpperCase()}
                         </a>
                       </Link>
-                    ))}
+                      )
+                      })}
                   </ul>
                 </div>
               </li>
             ))}
           </ul>
-          <Button style="hidden lg:block" link="/contact" text="Connect" />
+          <Button type="dark" style="hidden lg:block" link="/contact" text="Connect" />
         </Container>
       </nav>
     </>

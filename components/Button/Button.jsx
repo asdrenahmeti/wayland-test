@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-function Button({ link, type, text }) {
+function Button({ style, link, type, text }) {
   const variant = {
     dark: 'text-white bg-primary',
     light: 'text-black bg-white',
@@ -11,7 +11,7 @@ function Button({ link, type, text }) {
   return (
     <Link href={link}>
       <a
-        className={`font-mulish text-center font-bold mt-10 text-sm uppercase px-5 py-4 rounded-lg ${variant[type]} drop-shadow-lg lg:max-w-[180px]`}
+        className={`font-mulish ${style} text-center font-bold mt-10 text-sm uppercase px-5 py-4 rounded-lg ${variant[type]} drop-shadow-lg lg:max-w-[180px]`}
       >
         {text}
       </a>

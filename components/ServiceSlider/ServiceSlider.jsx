@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 import SliderItems from './ServiceItem'
 import { IoIosArrowForward } from 'react-icons/io'
+import Link from 'next/link'
 
 
 function ServiceSlider() {
@@ -15,11 +16,12 @@ function ServiceSlider() {
     <div className="min-h-[200px] flex items-center gap-48 justify-evenly lg:flex-row-reverse lg:justify-end">
       <div className="relative left-3 lg:left-0">
         <div className="w-[160px] h-[280px] lg:w-[200px] lg:h-[300px] object-cover rounded-xl overflow-hidden -translate-y-2/4 top-0 absolute">
-          <div className="w-[30px] h-[30px] rounded-full bg-w-pink-2 absolute bottom-2 right-2 h-[40px] z-50 text-white font-bold flex justify-center items-center text-xl cursor-pointer lg:text-2xl lg:w-[50px] lg:h-[50px]">
-            {' '}
-            <IoIosArrowForward />{' '}
-          </div>
-
+          <Link href="/industries" passHref>
+            <div className="w-[40px] h-[30px] rounded-full bg-w-pink-2 absolute bottom-2 right-1 h-[40px] z-50 text-white font-bold flex justify-center items-center text-xl cursor-pointer lg:text-2xl lg:w-[50px] lg:h-[50px]">
+              {' '}
+              <IoIosArrowForward />{' '}
+            </div>
+          </Link>
           <div className="w-full absolute top-0 left-0 h-[40px] bg-primary-transparent z-50 text-white">
             <p className="text-white text-center pt-2 uppercase font-mulish font-bold">
               {name}
