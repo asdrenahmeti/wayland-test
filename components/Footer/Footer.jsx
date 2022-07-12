@@ -20,7 +20,9 @@ function Footer() {
             </a>
           </Link>
 
-          <p className="underline font-bold font-source text-md mt-4">hello@wayland.io</p>
+          <p className="underline font-bold font-source text-md mt-4">
+            hello@wayland.io
+          </p>
         </div>
 
         <div className="flex flex-col gap-4 justify-center text-left">
@@ -34,30 +36,26 @@ function Footer() {
                 key={item.id}
               >
                 {item.items?.map((subItem, index) => (
-                  <Link
-                    href={`/${subItem.link}`}
-                    key={index}
-                  >
+                  <Link href={`/${subItem.link}`} key={index}>
                     <a>{subItem.name.toUpperCase()}</a>
                   </Link>
                 ))}
               </div>
             ))}
-
             <div className="flex flex-row font-source text-sm uppercase gap-3 sm:flex-col lg:flex-col">
-              <Link href={'http://www.facebook.com'}>
+              <Link href={'https://www.linkedin.com/company/waylandio'}>
                 <a className="hover:animate-bounce p-1 ">
                   <FiFacebook className="w-6 h-6" />
                 </a>
               </Link>
 
-              <Link href={'http://www.linkedin.com'}>
+              <Link href={'https://www.linkedin.com/company/waylandio'}>
                 <a className="hover:animate-bounce p-1">
                   <FiLinkedin className="w-6 h-6" />
                 </a>
               </Link>
 
-              <Link href={'http://www.instagram.com'}>
+              <Link href={'https://www.instagram.com/waylandio'}>
                 <a className="hover:animate-bounce p-1">
                   <FiInstagram className="w-6 h-6" />
                 </a>

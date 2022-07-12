@@ -95,7 +95,8 @@ module.exports = {
         'w-white': '#ACACAC',
         'w-orange': '#FF8F4A',
         'w-pink-2': '#FF457E',
-        'w-violet': '#D940C1'
+        'w-violet': '#D940C1',
+        'w-lightorange': '#FF8F4A'
       },
       linearBorderGradients: {
         directions: {
@@ -126,5 +127,8 @@ module.exports = {
       }
     }
   },
-  plugins: [require('tailwindcss-border-gradient-radius')]
+  plugins: [
+    require('tailwindcss-border-gradient-radius'),
+    require('tailwind-scrollbar-hide')
+  ]
 }

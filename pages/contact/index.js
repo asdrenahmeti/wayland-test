@@ -11,7 +11,7 @@ import ContactAnimationSvg from '../../public/assets/contact-animation.svg'
 function Connect() {
   return (
     <>
-      <Section style={'flex pt-24 md:h-screen'}>
+      <Section style={'flex pt-24 md:h-auto lg:py-48 lg:h-screen'}>
         <Container
           style={'flex flex-col md:flex-row md:gap-24 md:items-center'}
         >
@@ -40,13 +40,13 @@ function Connect() {
             <div className="w-[100%] h-[2px] bg-w-primary"></div>
 
             <div className="grid grid-rows-2 grid-cols-4 sm:grid-rows-1 md:grid-cols-2 lg:grid-cols-4">
-              <div className="col-span-2 font-source font-light pr-16">
-                <p className="md:mb-4">
+              <div className="col-span-2 md:col-span-4 lg:col-span-2 font-source font-light pr-16">
+                <p className="md:mb-4 max-w-[300px]">
                   Weather you’re a client, potential partner, or just want to
                   know more about wayland. We will be happy to talk with you.
                 </p>
               </div>
-              <div className="col-span-2 flex-col font-source font-bold">
+              <div className="col-span-2 flex flex-col justify-end font-source font-bold lg:max-w-[380px]">
                 <ul className="flex justify-between">
                   <li className="w-[40px]">US</li>
                   <li>+1 456 841 7484</li>
@@ -63,36 +63,38 @@ function Connect() {
                   <li>info@wayland.io</li>
                 </ul>
               </div>
-              <div className="col-span-1 font-source font-light mt-8 md:w-[400px">
+              <div className="col-span-4 text-center lg:text-left lg:col-span-1 font-source font-light mt-8 ">
                 Feel free to reach out if you want to collaborate with us, or
                 simply have a chat
               </div>
-              <div className="border-r-[1px] border-[#848483] mt-8 px-8">
-                <p className="font-source font-bold mb-4">US Office</p>
-                <ul className="text-sm font-light">
-                  <li>Inform Innovation Inc</li>
-                  <li>Austin, Texas</li>
-                  <li>Texas, 22300</li>
-                  <li>Texas, 22300</li>
-                </ul>
-              </div>
-              <div className="mt-8 pl-8 px-8">
-                <p className="font-source font-bold mb-4">Skopje Office</p>
-                <ul className="text-sm font-light">
-                  <li>Wayland Skopje</li>
-                  <li>Orce Nikolov 190/3/6</li>
-                  <li>Skopje, 1000</li>
-                  <li>North Macedonia</li>
-                </ul>
-              </div>
-              <div className="border-l-[1px] border-[#848483] mt-8 px-8">
-                <p className="font-source font-bold mb-4">Prishtina Office</p>
-                <ul className="text-sm font-light">
-                  <li>Wayland Prishtina</li>
-                  <li>St. Garibaldi, 32/2</li>
-                  <li>Prishtina 10000</li>
-                  <li>Kosovo</li>
-                </ul>
+              <div className="col-span-4 mx-auto lg:col-span-3 flex lg:justify-end gap-2">
+                <div className="border-r-[1px] border-[#848483] mt-8 px-3 md:px-0 lg:px-8">
+                  <p className="font-source font-bold mb-4">US</p>
+                  <ul className="text-sm font-light">
+                    <li>Inform Innovation Inc</li>
+                    <li>Austin, Texas</li>
+                    <li>Texas, 22300</li>
+                    <li>Texas, 22300</li>
+                  </ul>
+                </div>
+                <div className="mt-8 px-2 lg:pl-8 px-3 md:px-1 lg:px-8">
+                  <p className="font-source font-bold mb-4">Skopje</p>
+                  <ul className="text-sm font-light">
+                    <li>Wayland Skopje</li>
+                    <li>Orce Nikolov 190/3/6</li>
+                    <li>Skopje, 1000</li>
+                    <li>North Macedonia</li>
+                  </ul>
+                </div>
+                <div className="border-l-[1px] border-[#848483] mt-8 md:pl-1 px-3 lg:px-8">
+                  <p className="font-source font-bold mb-4">Prishtina</p>
+                  <ul className="text-sm font-light">
+                    <li>Wayland Prishtina</li>
+                    <li>St. Garibaldi, 32/2</li>
+                    <li>Prishtina 10000</li>
+                    <li>Kosovo</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

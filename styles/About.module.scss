@@ -1,0 +1,21 @@
+.box {
+  animation: scroll 20s infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: -300px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}

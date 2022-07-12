@@ -10,20 +10,27 @@ import Globe from '../public/assets/images/globe.svg'
 import Phone from '../public/assets/phone-animation.svg'
 import Button from '../components/Button/Button'
 import ButtonFill from '../components/Button/ButtonFill'
-
 import ServiceSlider from '../components/ServiceSlider/ServiceSlider'
-import Blog1 from '../public/assets/blogs/blog-1.jpg'
-import Blog2 from '../public/assets/blogs/blog-2.jpg'
-import Blog3 from '../public/assets/blogs/blog-3.jpg'
-import Blog4 from '../public/assets/blogs/blog-4.jpg'
-import Blog5 from '../public/assets/blogs/blog-5.jpg'
 import LevelIcon from '../public/assets/icons/custom-1.svg'
 import Particles from '../components/Particles/Particles'
 import { motion } from 'framer-motion'
 import HomeHero from '../components/HomeHero/HomeHero'
 
 const Home = () => {
-  
+  const cardVariants = {
+    offscreen: {
+      opacity: 0
+    },
+    onscreen: {
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  }
+
   return (
     <>
       <Head>
@@ -100,23 +107,15 @@ const Home = () => {
           <div className="flex flex-col gap-3 relative order-2 md:flex-row lg:flex-row lg:order-1">
             <div className="gap-4 flex flex-col relative md:-top-[100px] lg:-top-[30px]">
               <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {
-                    scale: 0.8,
-                    opacity: 0
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.5
-                    }
-                  }
-                }}
+                className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: false, amount: 1 }}
               >
-                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                <motion.div
+                  variants={cardVariants}
+                  className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24"
+                >
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
                       Embedded <br /> Systems
@@ -129,26 +128,18 @@ const Home = () => {
                     Designing code worthy of the surgical robotics and aviation
                     systems through Wayland embedded.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
               <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {
-                    scale: 0.8,
-                    opacity: 0
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.7
-                    }
-                  }
-                }}
+                className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: false, amount: 1 }}
               >
-                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-4 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                <motion.div
+                  variants={cardVariants}
+                  className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-4 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24"
+                >
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
                       Machine <br /> Learning
@@ -161,28 +152,20 @@ const Home = () => {
                     Mobilize your data to create continuously smarter and more
                     valuable insights and applications.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
             <div className="gap-4 flex flex-col relative z-[50] lg:-bottom-[110px] ">
               <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {
-                    scale: 0.8,
-                    opacity: 0
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.9
-                    }
-                  }
-                }}
+                className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: false, amount: 1 }}
               >
-                <div className="flex flex-col shadow-lg rounded-lg z-[50] w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                <motion.div
+                  variants={cardVariants}
+                  className="flex flex-col shadow-lg rounded-lg z-[50] w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24"
+                >
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
                       App
@@ -196,27 +179,18 @@ const Home = () => {
                     Wayland builds better apps. Intuitive, beautiful, and
                     well-crafted code for web, mobile, and desktop.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
               <motion.div
-                exit={{ opacity: 0 }}
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {
-                    scale: 0.8,
-                    opacity: 0
-                  },
-                  visible: {
-                    scale: 1,
-                    opacity: 1,
-                    transition: {
-                      delay: 1.1
-                    }
-                  }
-                }}
+                className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: false, amount: 1 }}
               >
-                <div className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24">
+                <motion.div
+                  variants={cardVariants}
+                  className="flex flex-col shadow-lg rounded-lg w-full py-20 gap-3 px-8 bg-white duration-300 cursor-default transform-gpu lg:max-w-[280px] lg:hover:scale-105 lg:py-24"
+                >
                   <div className="flex relative">
                     <h1 className="uppercase font-bold font-mulish text-primary tracking-normal text-lg">
                       Devops
@@ -229,7 +203,7 @@ const Home = () => {
                     Deploying better to make your move to market secure,
                     well-tested, and responsive to feedback.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
@@ -298,7 +272,7 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-4 gap-2 h-auto overflow-hidden sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 ">
             <div className="bg-green-300 min-h-[300px] relative flex items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog1}
+                src="/assets/blogs/blog-1.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
@@ -319,7 +293,7 @@ const Home = () => {
             </div>
             <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog2}
+                src="/assets/blogs/blog-2.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
@@ -339,7 +313,7 @@ const Home = () => {
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog3}
+                src="/assets/blogs/blog-3.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
@@ -359,7 +333,7 @@ const Home = () => {
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog4}
+                src="/assets/blogs/blog-4.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
@@ -379,7 +353,7 @@ const Home = () => {
             </div>
             <div className="bg-green-300 min-h-[300px] xl:col-span-2 relative flex justify-center cursor-pointer items-center overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog5}
+                src="/assets/blogs/blog-5.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
@@ -399,7 +373,7 @@ const Home = () => {
             </div>
             <div className="bg-green-300 min-h-[300px] relative flex justify-center items-center cursor-pointer overflow-hidden rounded-lg saturate-25 hover:saturate-100 transition-all duration-100">
               <Image
-                src={Blog1}
+                src="/assets/blogs/blog-1.jpg"
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
