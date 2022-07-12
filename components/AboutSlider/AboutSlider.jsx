@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import AboutItems from '../../components/AboutSlider/AboutItems'
+import AboutItems from './AboutItems'
 
 function AboutSlider() {
   const [activeItem, setActiveItem] = useState(AboutItems[0])

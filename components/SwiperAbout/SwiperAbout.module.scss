@@ -15,12 +15,12 @@
 
 .pagination {
   position: absolute;
-  left: 10px;
-  top: 0px;
+  left: 0px !important;
+  top: 0px !important;
   width: 20px !important;
   display: flex;
   gap: 5px;
-  flex-direction: column;
+  flex-direction: row !important;
 }
 
 .activeBullet {

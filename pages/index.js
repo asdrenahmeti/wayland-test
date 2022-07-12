@@ -110,7 +110,7 @@ const Home = () => {
                 className="card-container"
                 initial="offscreen"
                 whileInView="onscreen"
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
               >
                 <motion.div
                   variants={cardVariants}
@@ -134,7 +134,7 @@ const Home = () => {
                 className="card-container"
                 initial="offscreen"
                 whileInView="onscreen"
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
               >
                 <motion.div
                   variants={cardVariants}
@@ -160,7 +160,7 @@ const Home = () => {
                 className="card-container"
                 initial="offscreen"
                 whileInView="onscreen"
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
               >
                 <motion.div
                   variants={cardVariants}
@@ -185,7 +185,7 @@ const Home = () => {
                 className="card-container"
                 initial="offscreen"
                 whileInView="onscreen"
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
               >
                 <motion.div
                   variants={cardVariants}
