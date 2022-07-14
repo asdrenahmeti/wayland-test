@@ -27,16 +27,21 @@ function Navbar() {
     }
   }
 
+  const changeToggleAndActive = () => {
+    setToggleModal(false)
+    setActiveMenu(null)
+  }
+
   const menuVariants = {
     opened: {
-      top: 80,
+      left: 0,
       transition: {
         when: 'beforeChildren',
         staggerChildren: 0.3
       }
     },
     closed: {
-      top: '-100vh'
+      left: '-100%'
     }
   }
 
@@ -60,7 +65,7 @@ function Navbar() {
       <nav className="bg-primary font-mulish flex justify-between items-center fixed top-0 w-full z-[10000]">
         <Container style={'font-mulish py-3 flex justify-between items-center'}>
           <Link href="/">
-            <a className="relative z-10">
+            <a className="relative z-10" onClick={changeToggleAndActive}>
               <Image src={Logo} height={50} width={150} alt="Wayland Logo" />
             </a>
           </Link>
@@ -122,94 +127,99 @@ function Navbar() {
         </Container>
       </nav>
 
-      {toggleModal && (
-        <Container
-          style={
-            'h-[calc(100vh-80px)] fixed w-full left-0 top-[80px] z-[900] sm:hidden md:hidden '
-          }
+      <Container
+        style={`h-[calc(100vh-80px)] fixed w-full left-0 top-[80px] z-[900] sm:hidden md:hidden ${
+          toggleModal ? 'block' : 'hidden'
+        }`}
+      >
+        <motion.div
+          initial={false}
+          variants={menuVariants}
+          animate={toggleModal ? 'opened' : 'closed'}
+          className="flex flex-col left-0 px-6 h-[calc(100vh-80px)] gap-[8px] pt-6 fixed w-full bg-white z-[100] top-[80px] lg:hidden"
         >
-          <motion.div
-            initial={false}
-            variants={menuVariants}
-            animate={toggleModal ? 'opened' : 'closed'}
-            className="flex flex-col left-0 px-6 h-[calc(100vh-80px)] gap-[8px] pt-6 fixed w-full bg-white z-[100] top-[80px] lg:hidden"
-          >
-            {NavItems.map((nav, index) => {
-              return (
-                <div key={nav.id} className={`${styles.mobile}`}>
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <motion.div
-                        variants={linkVariants}
-                        className="flex items-center justify-between w-[100%]"
-                        onClick={() => changeActiveToggle(index)}
-                      >
-                        <h1 className="text-primary font-mulish font-bold text-xl mb-1">
-                          {nav.name}
-                        </h1>
-                        <AiOutlineRight
-                          className={`text-xl font-bold transform-transition duration-100 ${
-                            activeMenu === index ? 'rotate-90' : ''
+          {NavItems.map((nav, index) => {
+            return (
+              <div key={nav.id} className={`${styles.mobile}`}>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <motion.div
+                      variants={linkVariants}
+                      className="flex items-center justify-between w-[100%]"
+                      onClick={() => changeActiveToggle(index)}
+                    >
+                      <h1 className="text-primary font-mulish font-bold text-xl mb-1">
+                        {nav.name}
+                      </h1>
+                      <AiOutlineRight
+                        className={`text-xl font-bold transform-transition duration-100 ${
+                          activeMenu === index ? 'rotate-90' : ''
+                        }`}
+                      ></AiOutlineRight>
+                    </motion.div>
+                  </div>
+                  <div className="pl-2">
+                    {nav.subs.map((sub, indexSub) => {
+                      return (
+                        <div
+                          className={`flex items-center mb-1 h-[30px] transition-height duration-700 ${
+                            activeMenu === index
+                              ? 'h-auto opacity-1'
+                              : 'h-[0px] opacity-0'
                           }`}
-                        ></AiOutlineRight>
-                      </motion.div>
-                    </div>
-                    <div className="pl-2">
-                      {nav.subs.map((sub, indexSub) => {
-                        return (
-                          <div
-                            className={`flex items-center mb-1 h-[30px] transition-height duration-700 ${
-                              activeMenu === index
-                                ? 'h-auto opacity-1'
-                                : 'h-[0px] opacity-0'
-                            }`}
-                            key={indexSub}
-                          >
-                            <AiOutlineRight className="text-xl text-w-pink-2"></AiOutlineRight>
-                            <p className="uppercase">{sub.name}</p>
-                          </div>
-                        )
-                      })}
-                    </div>
+                          key={indexSub}
+                        >
+                          <AiOutlineRight className="text-xl text-w-pink-2"></AiOutlineRight>
+                          <Link href={`/${sub.link}`}>
+                            <a
+                              className="uppercase"
+                              onClick={changeToggleAndActive}
+                            >
+                              {sub.name}
+                            </a>
+                          </Link>
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
-              )
-            })}
+              </div>
+            )
+          })}
 
-            <div className="mt-auto mb-1">
-              <ButtonFill
-                type="light"
-                style="w-[80%] mt-6 mx-auto md:mx-0"
-                link="/contact"
-                text="Connect"
-                onClick={changeToggleModal}
-              />
+          <div className="mt-auto mb-1">
+            <ButtonFill
+              type="light"
+              style="w-[80%] mt-6 mx-auto md:mx-0"
+              link="/contact"
+              text="Connect"
+              onClick={changeToggleModal}
+            />
 
-              <div className="flex justify-center mt-4">
-                <div className="flex flex-row font-source text-sm uppercase gap-3 sm:flex-col lg:flex-col">
-                  <Link href={'http://www.facebook.com'}>
-                    <a className="p-1 ">
-                      <FiFacebook className="w-6 h-6" />
-                    </a>
-                  </Link>
+            <div className="flex justify-center mt-4">
+              <div className="flex flex-row font-source text-sm uppercase gap-3 sm:flex-col lg:flex-col">
+                <Link href={'http://www.facebook.com'}>
+                  <a className="p-1 ">
+                    <FiFacebook className="w-6 h-6" />
+                  </a>
+                </Link>
 
-                  <Link href={'http://www.linkedin.com'}>
-                    <a className="p-1">
-                      <FiLinkedin className="w-6 h-6" />
-                    </a>
-                  </Link>
+                <Link href={'http://www.linkedin.com'}>
+                  <a className="p-1">
+                    <FiLinkedin className="w-6 h-6" />
+                  </a>
+                </Link>
 
-                  <Link href={'http://www.instagram.com'}>
-                    <a className="p-1">
-                      <FiInstagram className="w-6 h-6" />
-                    </a>
-                  </Link>
-                </div>
+                <Link href={'http://www.instagram.com'}>
+                  <a className="p-1">
+                    <FiInstagram className="w-6 h-6" />
+                  </a>
+                </Link>
               </div>
             </div>
-          </motion.div>
-        </Container>
-      )}
+          </div>
+        </motion.div>
+      </Container>
     </>
   )
 }

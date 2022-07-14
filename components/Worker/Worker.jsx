@@ -11,7 +11,7 @@ function Worker({ info, direction = '' }) {
         direction === 'reverse' ? 'flex-row-reverse' : ''
       } lg:cursor-pointer lg:hover:scale-110 transition-transform duration:200`}
     >
-      <div className="w-[120px] h-[120px] rounded-full relative border-2 border-w-red overflow-hidden">
+      <div className="w-[100px] h-[100px] rounded-full relative border-2 border-w-red overflow-hidden">
         <Image
           src={Asdren}
           layout="fill"

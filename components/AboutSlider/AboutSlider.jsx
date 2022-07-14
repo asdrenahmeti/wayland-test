@@ -22,10 +22,15 @@ function AboutSlider() {
       </div>
       <div className="justify-center flex w-[35%] hidden md:flex">
         <div className="justify-center flex flex-col">
+          <h1 className="mb-4 uppercase text-2xl text-w-primary font-mulish font-bold text-w-red tracking-widest">
+            We value:
+          </h1>
           {AboutItems.map((item, index) => (
             <h1
               key={index}
-              className="uppercase cursor-pointer mb-4 font-mulish text-xl font-light tracking-widest transition-all duration-300 hover:text-w-lightorange"
+              className={`uppercase cursor-pointer mb-4 font-mulish text-xl font-light tracking-widest transition-all duration-300 ${
+                activeItem.id - 1 === index ? 'text-w-lightorange' : ''
+              } hover:text-w-lightorange`}
               onClick={() => setActiveItem(AboutItems[index])}
             >
               {item.name}

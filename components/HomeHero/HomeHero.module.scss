@@ -1,19 +1,18 @@
 .circle {
   position: relative;
-   height: 450px;
-    width: 450px;
+  height: 450px;
+  width: 450px;
   border-radius: 50%;
   filter: url(#wave);
-  animation: rotate 30s linear infinite;
+  animation: rotate 30s steps(14) linear infinite;
 
   @media screen and (min-width: 600px) {
-   
-     height: 500px;
+    height: 500px;
     width: 500px;
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 100px;
     left: 100px;
@@ -23,7 +22,7 @@
     border-radius: 50%;
     box-shadow: 0 0 50px #ff5353, inset 0 0 50px #ff5353;
     filter: url(#wave) blur(10px);
-    animation: anim 4s linear infinite;
+    animation: anim 4s steps(14) linear infinite;
   }
 }
 
@@ -32,23 +31,22 @@
     box-shadow: 0 0 50px #ff5353, inset 0 0 50px #ff5353;
   }
   20% {
-    box-shadow: 0 0 50px #FF8F4A, inset 0 0 50px #ff5353;
+    box-shadow: 0 0 50px #ff8f4a, inset 0 0 50px #ff5353;
   }
   40% {
     box-shadow: 0 0 50px #ff5353, inset 0 0 50px #ff5353;
   }
   60% {
-    box-shadow: 0 0 50px #FF8F4A, inset 0 0 50px #FF8F4A;
+    box-shadow: 0 0 50px #ff8f4a, inset 0 0 50px #ff8f4a;
   }
   80% {
-    box-shadow: 0 0 50px #ff5353, inset 0 0 50px #FF8F4A;
+    box-shadow: 0 0 50px #ff5353, inset 0 0 50px #ff8f4a;
   }
 }
 
 @keyframes rotate {
   from {
     transform: rotate(0deg);
-    
   }
   to {
     transform: rotate(360deg);

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import JohnsonLogo from './../../public/assets/icons/johnson-logo.svg'
 import GoogleLogo from './../../public/assets/icons/google-logo.svg'
 import AsanaLogo from './../../public/assets/icons/asana-logo.svg'
 import Image from 'next/image'
@@ -49,11 +48,6 @@ function PartnerSlider() {
     >
       <SwiperSlide className="flex justify-center items-center">
         <div className="relative">
-          <Image src={JohnsonLogo} alt="Johnson & Johnson Logo" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex justify-center items-center">
-        <div className="relative">
           <Image src={AsanaLogo} alt="Asana Logo" />
         </div>
       </SwiperSlide>
@@ -70,11 +64,6 @@ function PartnerSlider() {
       <SwiperSlide className="flex justify-center items-center">
         <div className="relative">
           <Image src={GoogleLogo} alt="Google Logo" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex justify-center items-center">
-        <div className="relative">
-          <Image src={JohnsonLogo} alt="Johnson & Johnson Logo" />
         </div>
       </SwiperSlide>
 
