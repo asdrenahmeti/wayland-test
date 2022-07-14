@@ -16,7 +16,7 @@ function index() {
   return (
     <Section style="pt-32 pb-16">
       <Container style="flex flex-col">
-        <p className="md:max-w-[300px] lg:text-xs lg:font-light">
+        <p className="md:max-w-[300px] font-source text-primary font-light">
           Our mission is to create valuable technology that will shape the
           future of applied science and the history of nations. Our vision is to
           develop and deploy innovation leaders that create future technologies
