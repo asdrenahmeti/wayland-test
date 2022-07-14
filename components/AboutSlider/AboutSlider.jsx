@@ -23,7 +23,7 @@ function AboutSlider() {
       <div className="justify-center flex w-[35%] hidden md:flex">
         <div className="justify-center flex flex-col">
           <h1 className="mb-4 uppercase text-2xl text-w-primary font-mulish font-bold text-w-red tracking-widest">
-            We value:
+            We value
           </h1>
           {AboutItems.map((item, index) => (
             <h1
