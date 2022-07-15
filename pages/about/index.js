@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Section from '../../components/Section/Section'
 import Container from '../../components/Container/Container'
 import Worker from '../../components/Worker/Worker'
@@ -10,7 +9,6 @@ import AboutItems from '../../components/AboutSlider/AboutSlider'
 import SwiperPhoto from '../../components/SwiperPhoto/SwiperPhoto'
 import SwiperAbout from '../../components/SwiperAbout/SwiperAbout'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
-import Asdren from './../../public/assets/staff/asdren.png'
 
 function index() {
   return (

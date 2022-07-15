@@ -276,6 +276,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
 
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
@@ -297,6 +298,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
@@ -317,6 +319,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
@@ -337,6 +340,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
@@ -357,6 +361,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
@@ -377,6 +382,7 @@ const Home = () => {
                 objectFit="cover"
                 layout="fill"
                 alt="Blog image"
+                priority
               ></Image>
               <div className="w-full p-5 h-full flex flex-col justify-center z-50 relative">
                 <h2 className="text-white font-mulish font-semibold text-xl ">
