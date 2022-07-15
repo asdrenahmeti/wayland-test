@@ -31,7 +31,7 @@ function SwiperPhoto() {
           nextEl: swiperNavNextRef.current
         }}
         modules={[Navigation, Pagination]}
-        className={`w-[100%] mt-8 h-[250px] overflow-visible flex items-center justify-end`}
+        className={`w-[100%] mt-8 h-[300px] overflow-visible flex items-center justify-end`}
         onInit={swiper => {
           swiper.params.navigation.prevEl = swiperNavPrevRef.current
           swiper.params.navigation.nextEl = swiperNavNextRef.current
@@ -40,9 +40,21 @@ function SwiperPhoto() {
         }}
       >
         <SwiperSlide className="flex justify-center flex-end">
-          <div className="relative w-[90%] top-0 h-[220px] rounded-md overflow-hidden">
+          <div className="relative w-[90%] top-0 h-[300px] rounded-md overflow-hidden">
             <Image
+              height={220}
+              width={100}
               src="/assets/blogs/blog-1.jpg"
+              alt="Johnson & Johnson Logo"
+              layout="fill"
+              className="object-cover w-full"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flex justify-center flex-end">
+          <div className="relative w-[90%] top-0 h-[300px] rounded-md overflow-hidden">
+            <Image
+              src="/assets/blogs/blog-2.jpg"
               alt="Johnson & Johnson Logo"
               layout="fill"
               objectFit="cover"
@@ -50,19 +62,9 @@ function SwiperPhoto() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="flex justify-center flex-end">
-          <div className="relative w-[90%] top-0 h-[220px] rounded-md overflow-hidden">
+          <div className="relative w-[90%] top-0 h-[300px] rounded-md overflow-hidden">
             <Image
-              src="/assets/blogs/blog-1.jpg"
-              alt="Johnson & Johnson Logo"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-center flex-end">
-          <div className="relative w-[90%] top-0 h-[220px] rounded-md overflow-hidden">
-            <Image
-              src="/assets/blogs/blog-1.jpg"
+              src="/assets/blogs/blog-3.jpg"
               alt="Johnson & Johnson Logo"
               layout="fill"
               objectFit="cover"

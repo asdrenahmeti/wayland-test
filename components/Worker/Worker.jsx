@@ -11,7 +11,7 @@ function Worker({ info, direction = '' }) {
         direction === 'reverse' ? 'flex-row-reverse' : ''
       } lg:cursor-pointer lg:hover:scale-110 transition-transform duration:200`}
     >
-      <div className="w-[100px] h-[100px] rounded-full relative border-2 border-w-red overflow-hidden">
+      <div className="w-[80px] h-[80px] rounded-full relative border-2 border-w-red overflow-hidden">
         <Image
           src={Asdren}
           layout="fill"
@@ -28,7 +28,9 @@ function Worker({ info, direction = '' }) {
         <p className={`font-source text-sm text-center lg:${align}`}>
           {info.position}
         </p>
-        <p className={`font-source ${align} text-center lg:${align}`}>
+        <p
+          className={`font-source ${align} text-center text-xs lg:text-sm lg:${align}`}
+        >
           {info.email}
         </p>
       </div>

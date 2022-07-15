@@ -41,7 +41,7 @@ function Navbar() {
       }
     },
     closed: {
-      left: '-100%'
+      left: '100%'
     }
   }
 
@@ -187,7 +187,7 @@ function Navbar() {
             )
           })}
 
-          <div className="mt-auto mb-1">
+          <div className="mt-auto mb-6">
             <ButtonFill
               type="light"
               style="w-[80%] mt-6 mx-auto md:mx-0"
