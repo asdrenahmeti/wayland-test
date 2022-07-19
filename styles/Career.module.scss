@@ -9,48 +9,6 @@
     flex-direction: column-reverse;
     width: 90%;
   }
-  .titleJoinUs {
-    flex: 1;
-    text-align: center;
-    text-transform: uppercase;
-    @media screen and (max-width: 1020px) {
-      text-align: left;
-      margin-bottom: 24px;
-    }
-  }
-  .descriptionJoinUs {
-    flex: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-right: 40px;
-
-    .descriptionTitle {
-      display: flex;
-      position: absolute;
-      right: -140px;
-      top: -60px;
-      align-items: center;
-      justify-content: space-between;
-      width: 240px;
-      height: 40px;
-      transform: rotate(-90deg);
-      span {
-        display: inline-block;
-        background-color: #FF5353;
-        width: 120px;
-        height: 4px;
-        border-radius: 4px;
-      }
-    }
-  }
-  .titleJoinUs {
-    flex: 1;
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 52px;
-    align-items: center;
-  }
 }
 .modalSectionWrapper {
   position: fixed;
@@ -63,6 +21,28 @@
   align-items: center;
   background-color: rgba($color: #000000, $alpha: 0.5);
   z-index: 9999999;
+
+  .closeModalBtn {
+    position: absolute;
+    top: calc(5vh - 15px);
+    right: calc(5% - 15px);
+    font-size: 14px;
+    padding-top: 4px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff5353;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    z-index: 101;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      padding-top: 6px;
+    }
+  }
+
   .modalSection {
     background-color: white;
     width: 90%;
@@ -84,35 +64,15 @@
       top: 50%;
       height: 0%;
       transform: translateY(-50%);
-      left: 20px;
+      left: 8px;
       width: 4px;
-      background-color: #FF5353;
+      background-color: #ff5353;
       border-radius: 4px;
       transition: height 25s ease-in;
     }
     .modalLine.show {
       height: 70%;
       transform: translateY(-50%);
-    }
-    .closeModalBtn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 14px;
-      padding-top: 4px;
-      width: 30px;
-      height: 30px;
-      background-color: #FF5353;
-      text-align: center;
-      border-radius: 50%;
-      color: white;
-      font-weight: bold;
-      z-index: 101;
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.1);
-        padding-top: 6px;
-      }
     }
   }
 }

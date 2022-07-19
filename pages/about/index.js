@@ -22,15 +22,23 @@ function index() {
           <div className="lg:hidden mb-4">
             <SectionTitle title="Our experts" />
           </div>
-          <p className="md:max-w-[300px] font-source text-primary font-light">
+          <p className="md:w-[100%] lg:max-w-[300px] font-source text-primary font-light">
             Our mission is to create valuable technology that will shape the
             future of applied science and the history of nations. Our vision is
             to develop and deploy innovation leaders that create future
             technologies today.
           </p>
-          <div className="flex justify-center flex-col lg:flex-row">
-            <div className="flex lg:items-center w-full mt-4 flex-col lg:flex-row"></div>
-            <div className="lg:ml-auto lg:w-[50%]">
+          <div className="flex justify-center flex-col md:flex-row">
+            <div className="flex lg:pl-8 items-center lg:items-start justify-center w-full mt-4 flex-col lg:flex-col">
+              <p className="font-mulish text-xl">
+                Work with fascinating{' '}
+                <span className="text-w-red font-bold">{''} clients</span> that
+              </p>
+              <p className="pl-4 font-mulish text-2xl font-bold">
+                have problems worth solving.
+              </p>
+            </div>
+            <div className="w-[100%] md:ml-auto md:w-[50%]">
               <SwiperPhoto></SwiperPhoto>
             </div>
           </div>

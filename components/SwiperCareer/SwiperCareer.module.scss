@@ -1,0 +1,60 @@
+.swiperButtonNext,
+.swiperButtonPrev {
+  bottom: 10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 90%;
+  z-index: 1;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.pagination {
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  width: 20px !important;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.activeBullet {
+  background: #ff8f4a !important;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+.bullets {
+  background: #ff5353;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+.swiperButtonPrev {
+  background: url('./../../public/assets/icons/swiper-red-prev.svg');
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: none;
+}
+
+.swiperButtonNext {
+  background: url('./../../public/assets/icons/swiper-red-next.svg');
+  right: 0 !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.test {
+  opacity: 0.3 !important;
+}

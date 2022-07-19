@@ -14,8 +14,8 @@ const NavItems = [
     name: 'PRODUCTS',
     desc: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Pellentesque Efficitur Consequat Lacinia.',
     subs: [
-      { name: 'sem', link: 'sem' },
-      { name: 'origin', link: 'origin' }
+      { name: 'sam', link: 'sam' },
+      { name: 'origin', link: 'construction' }
     ]
   },
   {
@@ -33,11 +33,12 @@ const NavItems = [
     name: 'NEWS & INSIGHTS',
     desc: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Pellentesque Efficitur Consequat Lacinia.',
     subs: [
-      {name: 'blog', link: 'blog'},
-      {name: 'articles', link: 'articles'},
-      {name: 'events', link:'events'},
-      {name: 'research', link:'research'},
-      {name: 'white papers', link: 'whitepapers'}]
+      { name: 'blog', link: 'construction' },
+      { name: 'articles', link: 'construction' },
+      { name: 'events', link: 'construction' },
+      { name: 'research', link: 'construction' },
+      { name: 'white papers', link: 'construction' }
+    ]
   }
 ]
 
