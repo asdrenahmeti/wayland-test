@@ -29,7 +29,7 @@ function Career() {
               where we live. You can make a difference here. Interested?
             </p>
             <div className="absolute origin-top-right -top-[30px] right-[10px] -translate-y-[100%] -rotate-90 lg:rotate-0 lg:right-[50px]">
-              <SectionTitle title="Our team" />
+              <SectionTitle title="Join our team" />
             </div>
           </div>
 
@@ -40,9 +40,9 @@ function Career() {
             <SectionTitle title="Our team" />
           </div> */}
 
-          <div className="order-1 font-mulish font-bold lg:text-center mb-4 lg:mb-0 uppercase text-3xl lg:order-2">
-            Come <br />
-            Join us
+          <div className="order-1 font-mulish font-bold mb-4 lg:mb-0 uppercase text-3xl lg:order-2">
+            Open <br />
+            Positions
           </div>
 
           {/* <MainSlider showModal={setShowModal} /> */}

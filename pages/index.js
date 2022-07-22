@@ -85,14 +85,14 @@ const Home = () => {
                 Join the wayland hub
               </p>
               <h1 className="uppercase text-2xl md:text-4xl font-mulish font-bold leading-relaxed relative">
-                Take your <br /> business to new <br /> levels
+                SCALE SMARTER AND <br /> BUILD BETTER
               </h1>
               <p className="font-source text-primary font-light mt-3">
-                At Wayland, we are Building Better - from smart technologies for
-                rural medicine and cleantech, to world-class medical robotics
-                and AI applications. Together with partners like you, our
-                mission is to unite the world’s technologies and make them
-                accessible and useful to people everywhere. How can we help you?
+                At Wayland, we are Building Better for our clients every day.
+                From top-tier medical robotics and AI applications to smart
+                technologies for rural medicine and cleantech - companies come
+                to Wayland to scale their teams and create market-ready IP. How
+                can we help you?
               </p>
 
               <ButtonFill
@@ -125,8 +125,8 @@ const Home = () => {
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
-                    Designing code worthy of the surgical robotics and aviation
-                    systems through Wayland embedded.
+                    Complex embedded system engineering with applications in
+                    surgical robotics and beyond.
                   </p>
                 </motion.div>
               </motion.div>
@@ -222,10 +222,10 @@ const Home = () => {
           <div className="z-30 flex flex-col w-full h-full justify-center gap-12 py-36 lg:w-6/12 gap-20">
             <div>
               <h1 className="font-mulish font-bold text-5xl text-white leading-[70px]">
-                Our <br /> Industries
+                Industries Served
               </h1>
               <p className="font-mulish font-bold text-2xl text-w-white">
-                Making digital transformation work for you.
+                Wayland specializes in complex applications.
               </p>
             </div>
 

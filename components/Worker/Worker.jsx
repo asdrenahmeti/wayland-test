@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Asdren from './../../public/assets/staff/asdren.png'
 
 function Worker({ info, direction = '' }) {
   let align = direction === 'reverse' ? 'text-right' : 'text-left'
@@ -11,9 +10,9 @@ function Worker({ info, direction = '' }) {
         direction === 'reverse' ? 'flex-row-reverse' : ''
       } lg:cursor-pointer lg:hover:scale-110 transition-transform duration:200`}
     >
-      <div className="w-[80px] h-[80px] rounded-full relative border-2 border-w-red overflow-hidden">
+      <div className="w-[70px] h-[70px] rounded-full relative border-2 border-w-red overflow-hidden">
         <Image
-          src={Asdren}
+          src={info.image || '/assets/images/asdren.png'}
           layout="fill"
           objectFit="cover"
           alt="Profile picture"

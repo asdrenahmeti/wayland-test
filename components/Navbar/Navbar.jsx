@@ -105,7 +105,14 @@ function Navbar() {
                   <ul className="flex flex-row -top-6 relative">
                     {nav.subs.map((sub, index) => {
                       return (
-                        <Link href={`/${sub.link}`} key={index}>
+                        <Link
+                          href={`${
+                            sub.link.startsWith('https')
+                              ? sub.link
+                              : `/${sub.link}`
+                          }`}
+                          key={index}
+                        >
                           <a className="text-primary mr-10 font-mulish font-normal text-base flex items-center">
                             <AiOutlineRight className="inline-block text-w-pink mr-2" />
                             {sub.name.toUpperCase()}

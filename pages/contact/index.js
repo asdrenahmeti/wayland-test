@@ -7,7 +7,6 @@ import TabbedContact from '../../components/Tab/TabbedContact'
 import ContactAnimation from '../../components/ContactAnimation/ContactAnimation'
 import ContactAnimationSvg from '../../public/assets/contact-animation.svg'
 
-
 function Connect() {
   return (
     <>
@@ -42,8 +41,10 @@ function Connect() {
             <div className="grid grid-rows-2 grid-cols-4 sm:grid-rows-1 md:grid-cols-2 lg:grid-cols-4">
               <div className="col-span-2 md:col-span-4 lg:col-span-2 font-source font-light pr-16">
                 <p className="md:mb-4 max-w-[300px]">
-                  Weather you’re a client, potential partner, or just want to
-                  know more about wayland. We will be happy to talk with you.
+                  As a global innovation firm, Wayland values partnership with
+                  like-minded companies. Please contact us to learn more about
+                  how we can build your next system, or ways we can invest
+                  together in new innovation.
                 </p>
               </div>
               <div className="col-span-2 flex flex-col justify-end font-source font-bold lg:max-w-[380px]">
@@ -64,8 +65,8 @@ function Connect() {
                 </ul>
               </div>
               <div className="col-span-4 text-center lg:text-left lg:col-span-1 font-source font-light mt-8 ">
-                Feel free to reach out if you want to collaborate with us, or
-                simply have a chat
+                Contact our growth team at teams@wayland.io or use the form
+                below.
               </div>
               <div className="col-span-4 mx-auto lg:col-span-3 flex lg:justify-end gap-2">
                 <div className="border-r-[1px] border-[#848483] mt-8 px-3 md:px-0 lg:px-8">
@@ -73,8 +74,8 @@ function Connect() {
                   <ul className="text-sm font-light">
                     <li>Inform Innovation Inc</li>
                     <li>Austin, Texas</li>
-                    <li>Texas, 22300</li>
-                    <li>Texas, 22300</li>
+                    <li>Texas, 78731</li>
+                    <li>United States</li>
                   </ul>
                 </div>
                 <div className="mt-8 px-2 lg:pl-8 px-3 md:px-1 lg:px-8">
@@ -102,11 +103,11 @@ function Connect() {
           <div className="sm:hidden">
             <div className="border-l ml-4 border-w-violet pl-4 py-2 sm:hidden">
               <h1 className="font-mulish font-bold text-2xl pb-2 text-primary">
-                Let&apos;s make your project reality
+                Let&apos;s make your project a reality
               </h1>
               <p className="font-source font-light text-base text-primary">
-                Weather you’re a client, potential partner, or just want to know
-                more about Wayland. We will be happy to talk with you.
+                Contact our growth team to setup a discovery call and explore
+                how Wayland can help you scale faster.
               </p>
             </div>
 
@@ -180,11 +181,11 @@ function Connect() {
           <form className="flex flex-col gap-5 py-10 w-full md:w-[600px]">
             <div className="hidden border-l ml-4 border-w-violet pl-4 py-2 md:block md:border-white">
               <h1 className="font-mulish font-bold text-2xl pb-2 text-primary md:text-white">
-                Let&apos;s make your project reality
+                Let&apos;s make your project a reality
               </h1>
               <p className="font-source font-light text-base text-primary md:text-white">
-                Weather you’re a client, potential partner, or just want to know
-                more about Wayland. We will be happy to talk with you.
+                Contact our growth team to setup a discovery call and explore
+                how Wayland can help you scale faster.
               </p>
             </div>
             <div className="relative z-0 mb-6 w-full group">

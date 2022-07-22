@@ -16,11 +16,11 @@ function index() {
       <Section style="pt-32 pb-16">
         <Container style="flex flex-col relative">
           <div className="lg:block hidden absolute top-1/2 -translate-y-1/2 -left-[60px]">
-            <SectionTitle title="Our experts" />
+            <SectionTitle title="Our focus" />
           </div>
 
           <div className="lg:hidden mb-4">
-            <SectionTitle title="Our experts" />
+            <SectionTitle title="Our focus" />
           </div>
           <p className="md:w-[100%] lg:max-w-[300px] font-source text-primary font-light">
             Our mission is to create valuable technology that will shape the
@@ -31,7 +31,7 @@ function index() {
           <div className="flex justify-center flex-col md:flex-row">
             <div className="flex lg:pl-8 items-center lg:items-start justify-center w-full mt-4 flex-col lg:flex-col">
               <p className="font-mulish text-xl">
-                Work with fascinating{' '}
+                Our experts work with fascinating
                 <span className="text-w-red font-bold">{''} clients</span> that
               </p>
               <p className="pl-4 font-mulish text-2xl font-bold">
@@ -63,9 +63,19 @@ function index() {
                 <div className={`relative bg-white`}>
                   <Worker
                     info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO'
+                      name: 'Jamie Anderson',
+                      email: 'jamie@wayland.io',
+                      position: 'CEO & Partner',
+                      image: '/assets/staff/jamie.png'
+                    }}
+                    direction="reverse"
+                  ></Worker>
+                  <Worker
+                    info={{
+                      name: 'Evan Kubicek',
+                      email: 'evan@wayland.io',
+                      position: 'Sales & Impact Strategy',
+                      image: '/assets/staff/evan.png'
                     }}
                     direction="reverse"
                   ></Worker>
@@ -73,7 +83,8 @@ function index() {
                     info={{
                       name: 'Veton Vela',
                       email: 'veton@wayland.io',
-                      position: 'CEO'
+                      position: 'CEO',
+                      image: '/assets/staff/missing.png'
                     }}
                     direction="reverse"
                   ></Worker>
@@ -81,15 +92,8 @@ function index() {
                     info={{
                       name: 'Veton Vela',
                       email: 'veton@wayland.io',
-                      position: 'CEO'
-                    }}
-                    direction="reverse"
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO'
+                      position: 'CEO',
+                      image: '/assets/staff/missing.png'
                     }}
                     direction="reverse"
                   ></Worker>
@@ -99,7 +103,17 @@ function index() {
                     info={{
                       name: 'Veton Vela',
                       email: 'veton@wayland.io',
-                      position: 'CEO'
+                      position: 'Founder & CTO',
+                      image: '/assets/staff/missing.png'
+                    }}
+                    direction=""
+                  ></Worker>
+                  <Worker
+                    info={{
+                      name: 'Asdren Ahmeti',
+                      email: 'asdren@wayland.io',
+                      position: 'Team Lead',
+                      image: '/assets/staff/asdren.png'
                     }}
                     direction=""
                   ></Worker>
@@ -107,7 +121,8 @@ function index() {
                     info={{
                       name: 'Veton Vela',
                       email: 'veton@wayland.io',
-                      position: 'CEO'
+                      position: 'CEO',
+                      image: '/assets/staff/missing.png'
                     }}
                     direction=""
                   ></Worker>
@@ -115,15 +130,8 @@ function index() {
                     info={{
                       name: 'Veton Vela',
                       email: 'veton@wayland.io',
-                      position: 'CEO'
-                    }}
-                    direction=""
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO'
+                      position: 'CEO',
+                      image: '/assets/staff/missing.png'
                     }}
                     direction=""
                   ></Worker>
