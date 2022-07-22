@@ -15,14 +15,23 @@ const FooterItems = [
       { name: 'GET IN TOUCH', link: 'contact' }
     ]
   },
+  // {
+  //   id: 3,
+  //   items: [
+  //     { name: 'INSIGHTS', link: 'insights' },
+  //     { name: 'EVENTS', link: 'events' },
+  //     { name: 'ARTICLES', link: 'articles' }
+  //   ]
+  // },
   {
     id: 3,
     items: [
-      { name: 'INSIGHTS', link: 'insights' },
-      { name: 'EVENTS', link: 'events' },
-      { name: 'ARTICLES', link: 'articles' }
+      { name: 'TERMS OF SERVICE', link: 'terms-and-conditions' },
+      { name: 'PRIVACY POLICE', link: 'privacy-policy' },
+      { name: 'ANTI CORRUPTION POLICY', link: 'anti-corruption' }
     ]
   },
+
   {
     id: 4,
     links: [

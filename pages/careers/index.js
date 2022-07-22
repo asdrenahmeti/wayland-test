@@ -28,7 +28,7 @@ function Career() {
               outside - of the office. We care about each other and the cities
               where we live. You can make a difference here. Interested?
             </p>
-            <div className="absolute origin-top-right -top-[30px] right-[10px] -translate-y-[100%] -rotate-90 lg:rotate-0 lg:right-[50px]">
+            <div className="absolute origin-top-right -top-[70px] right-[10px] -translate-y-[100%] -rotate-90 lg:rotate-0 lg:right-[50px]">
               <SectionTitle title="Join our team" />
             </div>
           </div>

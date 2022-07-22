@@ -4,9 +4,9 @@ const NavItems = [
     name: 'COMPANY',
     desc: 'Wayland is a deeptech software innovation firm built around an education accelerator and R&D incubator.',
     subs: [
-      { name: 'about us', link: 'about' },
-      { name: 'careers', link: 'careers' },
-      { name: 'get in touch', link: 'contact' }
+      { name: 'about us', link: '/about' },
+      { name: 'careers', link: '/careers' },
+      { name: 'get in touch', link: '/contact' }
     ]
   },
   {
@@ -15,7 +15,7 @@ const NavItems = [
     desc: 'Wayland’s innovation culture leads to internal startups that we support and encourage. Learn more.',
     subs: [
       { name: 'sam', link: 'https://safesurgeryglobal.com' },
-      { name: 'origin', link: 'construction' },
+      { name: 'origin', link: '/construction' },
       { name: 'purecloud', link: 'https://purecloudairquality.com' }
     ]
   },
@@ -24,9 +24,9 @@ const NavItems = [
     name: 'INDUSTRIES',
     desc: 'Wayland teams specialize in software and robotics technologies that provide key value across industries.',
     subs: [
-      { name: 'healthcare', link: 'industries' },
-      { name: 'robotics', link: 'industries' },
-      { name: 'education', link: 'industries' }
+      { name: 'healthcare', link: '/industries' },
+      { name: 'robotics', link: '/industries' },
+      { name: 'education', link: '/industries' }
     ]
   },
   {
@@ -34,9 +34,9 @@ const NavItems = [
     name: 'SERVICES',
     desc: 'Wayland specializes in high-value technologies for robotics, cloud, and data science applications.',
     subs: [
-      { name: 'Embedded Engineering', link: 'construction' },
-      { name: 'Custom Fullstack', link: 'construction' },
-      { name: 'AI/ML', link: 'construction' }
+      { name: 'Embedded Engineering', link: '/construction' },
+      { name: 'Custom Fullstack', link: '/construction' },
+      { name: 'AI/ML', link: '/construction' }
     ]
   }
   // {
