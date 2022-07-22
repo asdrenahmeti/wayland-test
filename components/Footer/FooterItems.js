@@ -27,7 +27,7 @@ const FooterItems = [
     id: 3,
     items: [
       { name: 'TERMS OF SERVICE', link: 'terms-and-conditions' },
-      { name: 'PRIVACY POLICE', link: 'privacy-policy' },
+      { name: 'PRIVACY POLICY', link: 'privacy-policy' },
       { name: 'ANTI CORRUPTION POLICY', link: 'anti-corruption' }
     ]
   },
