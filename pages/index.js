@@ -47,7 +47,7 @@ const Home = () => {
         <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
           <div className="absolute top-[45%] lg:top-[50%] -translate-y-2/4">
             {/* <HomeHero></HomeHero> */}
-            <Image src="/assets/home.png" width="320" height="400"></Image>
+            <Image src="/assets/home.svg" width="600" height="600"></Image>
           </div>
 
           <motion.div
