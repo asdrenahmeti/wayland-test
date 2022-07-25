@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/link-passhref */
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Head from 'next/head'
 import Section from '../components/Section/Section'
 import Container from '../components/Container/Container'
@@ -11,10 +11,14 @@ import Phone from '../public/assets/phone-animation.svg'
 import Button from '../components/Button/Button'
 import ButtonFill from '../components/Button/ButtonFill'
 import ServiceSlider from '../components/ServiceSlider/ServiceSlider'
-import LevelIcon from '../public/assets/icons/custom-1.svg'
+import EmbeddedIcon from '../public/assets/icons/embedded-systems.svg'
+import DevopsIcon from '../public/assets/icons/devops.svg'
+import AppDevelopmentIcon from '../public/assets/icons/app-development.svg'
+import MachineLearning from '../public/assets/icons/machine-learning.svg'
+
 import Particles from '../components/Particles/Particles'
 import { motion } from 'framer-motion'
-import HomeHero from '../components/HomeHero/HomeHero'
+// import HomeHero from '../components/HomeHero/HomeHero'
 
 const Home = () => {
   const cardVariants = {
@@ -42,7 +46,8 @@ const Home = () => {
       >
         <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
           <div className="absolute top-[45%] lg:top-[50%] -translate-y-2/4">
-            <HomeHero></HomeHero>
+            {/* <HomeHero></HomeHero> */}
+            <Image src="/assets/home.png" width="320" height="400"></Image>
           </div>
 
           <motion.div
@@ -121,7 +126,12 @@ const Home = () => {
                       Embedded <br /> Systems
                     </h1>
                     <div className="absolute right-0 -top-10">
-                      <Image src={LevelIcon} alt="Level icon" />
+                      <Image
+                        src={EmbeddedIcon}
+                        width="50"
+                        height="50"
+                        alt="Embedded Icon"
+                      />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
@@ -145,7 +155,12 @@ const Home = () => {
                       Machine <br /> Learning
                     </h1>
                     <div className="absolute right-0 -top-10">
-                      <Image src={LevelIcon} alt="Level icon" />
+                      <Image
+                        src={MachineLearning}
+                        width="50"
+                        height="50"
+                        alt="Level icon"
+                      />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
@@ -172,7 +187,12 @@ const Home = () => {
                       <br /> Development
                     </h1>
                     <div className="absolute right-0 -top-10">
-                      <Image src={LevelIcon} alt="Level icon" />
+                      <Image
+                        src={AppDevelopmentIcon}
+                        width="50"
+                        height="50"
+                        alt="Level icon"
+                      />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
@@ -196,7 +216,12 @@ const Home = () => {
                       Devops
                     </h1>
                     <div className="absolute right-0 -top-10">
-                      <Image src={LevelIcon} alt="Level icon" />
+                      <Image
+                        src={DevopsIcon}
+                        height="50"
+                        width="50"
+                        alt="Level icon"
+                      />
                     </div>
                   </div>
                   <p className="text-sm text-w-gray font-light font-source">
@@ -264,7 +289,7 @@ const Home = () => {
         </Container>
       </Section>
 
-      <Section>
+      {/* <Section>
         <Container style="py-8">
           <h1 className="font-mulish font-bold text-4xl py-8 text-primary">
             News & Insights
@@ -399,7 +424,7 @@ const Home = () => {
             </div>
           </div>
         </Container>
-      </Section>
+      </Section> */}
     </>
   )
 }

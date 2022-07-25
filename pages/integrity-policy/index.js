@@ -9,7 +9,7 @@ function index() {
     <Section style={'pt-32 pb-16 scroll-smooth'}>
       <Container style={'font-mulish'}>
         <h1 className="text-3xl font-bold mb-4">
-          Anti-Bribery and Corruption Policy
+          Integrity Policy (Anti-Corruption Policy)
         </h1>
         <div className="flex flex-row items-center mt-6">
           <div className="w-[4px] h-[28px] bg-w-orange mr-2"></div>
