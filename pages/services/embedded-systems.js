@@ -5,7 +5,7 @@ import Container from '../../components/Container/Container'
 import Section from '../../components/Section/Section'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { TiTick } from 'react-icons/ti'
-import EmbeddedList from './EmbeddedList'
+import EmbeddedList from '../../data/EmbeddedList'
 
 function index() {
   return (
