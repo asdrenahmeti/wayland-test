@@ -2,11 +2,15 @@ import Layout from '../components/Layout/Layout'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+  if (Component.name === 'Construction') {
+    return <Component {...pageProps} />
+  } else {
+    return (
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    )
+  }
 }
 
 export default MyApp
