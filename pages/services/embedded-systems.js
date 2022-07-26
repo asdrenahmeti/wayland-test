@@ -7,8 +7,6 @@ import { AiFillCheckCircle } from 'react-icons/ai'
 import { TiTick } from 'react-icons/ti'
 import EmbeddedList from './EmbeddedList'
 
-console.log(EmbeddedList)
-
 function index() {
   return (
     <>
