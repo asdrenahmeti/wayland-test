@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Container from '../../components/Container/Container'
 import Section from '../../components/Section/Section'
 
-function index() {
+function Construction() {
   return (
     <Section style={'pt-32 pb-16 h-screen'}>
       <Container style={'flex h-full w-full justify-center items-center'}>
@@ -31,4 +31,4 @@ function index() {
   )
 }
 
-export default index
+export default Construction

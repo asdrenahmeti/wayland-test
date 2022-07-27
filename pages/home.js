@@ -259,7 +259,7 @@ const Home = () => {
         </Container>
       </Section>
 
-      <Section style={`mb-8`}>
+      <Section style={`mb-12`}>
         <Container
           style={`min-h-[600px] h-full justify-center lg:h-full py-28 pb-0`}
         >

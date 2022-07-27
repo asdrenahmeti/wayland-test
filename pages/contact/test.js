@@ -35,78 +35,9 @@ function Connect() {
               ></Image>
             </div>
 
-            <div className="flex flex-col max-w-[800px]">
-              <div className="flex flex-col">
-                <h1 className="font-mulish text-lg font-bold uppercase">
-                  Wayland
-                </h1>
-                <div className="w-[100%] h-[2px] bg-primary my-4"></div>
+            <h1 className="font-mulish text-lg font-bold uppercase">Wayland</h1>
+            <div className="w-[100%] h-[2px] bg-w-primary"></div>
 
-                <div className="flex gap-[50px] md:gap-[20px] md:flex-col lg:flex-row lg:justify-between">
-                  <p className="flex-[1] lg:flex-1 xl:flex-[2] font-source font-light">
-                    As a global innovation firm, Wayland values partnership with
-                    like-minded companies. Please contact us to learn more about
-                    how we can build your next system, or ways we can invest
-                    together in new innovation.
-                  </p>
-                  <div className="flex flex-col flex-1 lg:flex-[1] ">
-                    <div className="flex gap-[10px] font-bold font-source justify-between sm:justify-end md:justify-between lg:justify-end">
-                      <p>US</p>
-                      <p>+1 456 841 7484</p>
-                    </div>
-                    <div className="flex gap-[10px] font-bold font-source justify-between sm:justify-end md:justify-between lg:justify-end">
-                      <p>NMK</p>
-                      <p>+389 75 123 432</p>
-                    </div>
-                    <div className="flex gap-[10px] font-bold font-source justify-between sm:justify-end md:justify-between lg:justify-end">
-                      <p>RKS</p>
-                      <p>+383 49 234 232</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col mt-8 gap-[10px] lg:gap-[40px] lg:flex-row">
-                  <div className="flex-1">
-                    <p className="mb-4 font-source font-light">
-                      Contact our growth team at teams@wayland.io or use the
-                      form below.
-                    </p>
-                  </div>
-                  <div className="flex justify-between gap-[5px] lg:flex-end lg:flex-[2]">
-                    <div className="">
-                      <p className="font-source font-bold mb-4">US</p>
-                      <ul className="text-sm font-light">
-                        <li>Inform Innovation Inc</li>
-                        <li>Austin, Texas</li>
-                        <li>Texas, 78731</li>
-                        <li>United States</li>
-                      </ul>
-                    </div>
-                    <div className="border-r-[1px] border-[#848483]"></div>
-                    <div className="">
-                      <p className="font-source font-bold mb-4">Skopje</p>
-                      <ul className="text-sm font-light">
-                        <li>Wayland Skopje</li>
-                        <li>Orce Nikolov 190/3/6</li>
-                        <li>Skopje, 1000</li>
-                        <li>North Macedonia</li>
-                      </ul>
-                    </div>
-                    <div className="border-r-[1px] border-[#848483]"></div>
-
-                    <div className="">
-                      <p className="font-source font-bold mb-4">Prishtina</p>
-                      <ul className="text-sm font-light">
-                        <li>Wayland Prishtina</li>
-                        <li>St. Garibaldi, 32/2</li>
-                        <li>Prishtina 10000</li>
-                        <li>Kosovo</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             {/* <div className="grid grid-rows-2 grid-cols-4 sm:grid-rows-1 md:grid-cols-2 lg:grid-cols-4">
               <div className="col-span-2 md:col-span-4 lg:col-span-2 font-source font-light pr-16">
                 <p className="md:mb-4 max-w-[300px]">
@@ -172,16 +103,14 @@ function Connect() {
                 Let&apos;s make your project a reality
               </h1>
               <p className="font-source font-light text-base text-primary">
-                Contact our growth team at teams@wayland.io or use the form
-                below.
+                Contact our growth team to setup a discovery call and explore
+                how Wayland can help you scale faster.
               </p>
             </div>
 
             <p className="font-source text-base text-primary my-8">
-              As a global innovation firm, Wayland values partnership with
-              like-minded companies. Please contact us to learn more about how
-              we can build your next system, or ways we can invest together in
-              new innovation.
+              Feel free to reach out if you want to collaborate with us, or
+              simply have a chat
             </p>
 
             <h1 className="uppercase font-semibold mb-4 font-source text-2xl">
