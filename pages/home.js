@@ -47,7 +47,12 @@ const Home = () => {
         <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
           <div className="absolute top-[45%] lg:top-[50%] -translate-y-2/4">
             {/* <HomeHero></HomeHero> */}
-            <Image src="/assets/home.svg" width="600" height="600"></Image>
+            <Image
+              src="/assets/home.svg"
+              width="600"
+              height="600"
+              alt="Hero Image"
+            ></Image>
           </div>
 
           <motion.div
@@ -81,7 +86,7 @@ const Home = () => {
 
       <Section style={`bg-white`}>
         <Container
-          style={`min-h-[600px] z-100 lg:relative lg:max-h-[700px] py-[50px] md:py-[100px] lg:p-28 h-full justify-center lg:text-left lg:pt-14 lg:flex lg:justify-between lg:items-center relative`}
+          style={`min-h-[600px] z-100 lg:relative lg:max-h-[700px] py-[50px] md:py-[100px] lg:p-28 h-full justify-center lg:text-left lg:pt-14 lg:flex lg:justify-between xl:max-w-[65%] lg:gap-[50px] lg:items-center relative`}
         >
           <div className="mb-[50px] relative order-1 sm:w-full md:mb-[150px] lg:order-2 lg:mb-0 lg:max-w-[400px]">
             <div className="z-[20] relative">

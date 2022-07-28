@@ -1,37 +1,30 @@
 import React from 'react'
 import Image from 'next/image'
 
-function Worker({ info, direction = '' }) {
-  let align = direction === 'reverse' ? 'text-right' : 'text-left'
-
+function Worker({ info, style, align }) {
   return (
     <div
-      className={`flex mb-8 items-center gap-4 flex-col lg:flex-row ${
-        direction === 'reverse' ? 'flex-row-reverse' : ''
-      } lg:cursor-pointer lg:hover:scale-110 transition-transform duration:200`}
+      className={`flex h-[50%] gap-[10px] flex-col justify-center items-center ${style} `}
     >
-      <div className="w-[70px] h-[70px] rounded-full relative border-2 border-w-red overflow-hidden">
+      <div className="w-[100px] bg-white h-[100px] rounded-full relative overflow-hidden">
         <Image
           src={info.image || '/assets/images/asdren.png'}
           layout="fill"
           objectFit="cover"
           alt="Profile picture"
+          priority
         ></Image>
       </div>
-      <div>
-        <h2
-          className={`font-source font-bold text-base text-center lg:${align}`}
-        >
+      <div className={`${align} text-center`}>
+        <h2 className={`font-source font-bold text-xl leading-2 ${align}`}>
           {info.name}
         </h2>
-        <p className={`font-source text-sm text-center lg:${align}`}>
+        <p className={`font-source text-sm m-0 p-0 leading-1 ${align}`}>
           {info.position}
         </p>
-        <p
-          className={`font-source ${align} text-center text-xs lg:text-sm lg:${align}`}
-        >
+        {/* <p className={`font-source text-sm lg:text-sm m-0 p-0 ${align}`}>
           {info.email}
-        </p>
+        </p> */}
       </div>
     </div>
   )

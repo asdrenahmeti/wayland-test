@@ -4,11 +4,18 @@ import Container from '../../components/Container/Container'
 import Worker from '../../components/Worker/Worker'
 import ButtonFill from '../../components/Button/ButtonFill'
 import PartnerSlider from '../../components/PartnerSlider/PartnerSlider'
-import styles from '../../styles/About.module.scss'
+// import styles from '../../styles/About.module.scss'
 import AboutItems from '../../components/AboutSlider/AboutSlider'
 import SwiperPhoto from '../../components/SwiperPhoto/SwiperPhoto'
 import SwiperAbout from '../../components/SwiperAbout/SwiperAbout'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import FinalStaff from '../../data/StaffList'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectCards } from 'swiper'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/effect-cards'
 
 function index() {
   return (
@@ -55,90 +62,44 @@ function index() {
             <SectionTitle title="Our team" />
           </div>
 
-          <div className="flex relative md:h-[450px] flex-col overflow-x-hidden scrollbar-hide justify-between md:flex-row">
-            <div className="flex w-full relative md:h-[450px] h-[400px] md:w-[50%] overflow-x-hidden scrollbar-hide">
-              <div
-                className={`flex w-full gap-4 top-0 justify-around items-center left-0 absolute left-1/2 -translate-x-1/2 bg-white scrollbar-hide lg:w-[100%] lg:justify-start lg:justify-center ${styles.box}`}
-              >
-                <div className={`relative bg-white`}>
-                  <Worker
-                    info={{
-                      name: 'Jamie Anderson',
-                      email: 'jamie@wayland.io',
-                      position: 'CEO & Partner',
-                      image: '/assets/staff/jamie.png'
-                    }}
-                    direction="reverse"
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Evan Kubicek',
-                      email: 'evan@wayland.io',
-                      position: 'Sales & Impact Strategy',
-                      image: '/assets/staff/evan.png'
-                    }}
-                    direction="reverse"
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO',
-                      image: '/assets/staff/missing.png'
-                    }}
-                    direction="reverse"
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO',
-                      image: '/assets/staff/missing.png'
-                    }}
-                    direction="reverse"
-                  ></Worker>
-                </div>
-                <div className={`relative top-[70px]`}>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'Founder & CTO',
-                      image: '/assets/staff/missing.png'
-                    }}
-                    direction=""
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Asdren Ahmeti',
-                      email: 'asdren@wayland.io',
-                      position: 'Team Lead',
-                      image: '/assets/staff/asdren.png'
-                    }}
-                    direction=""
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO',
-                      image: '/assets/staff/missing.png'
-                    }}
-                    direction=""
-                  ></Worker>
-                  <Worker
-                    info={{
-                      name: 'Veton Vela',
-                      email: 'veton@wayland.io',
-                      position: 'CEO',
-                      image: '/assets/staff/missing.png'
-                    }}
-                    direction=""
-                  ></Worker>
-                </div>
-              </div>
-            </div>
-            <div className="mt-10 md:mt-0 md:w-[45%] lg:mt-0 flex justify-center items-center flex-col lg:max-w-[580px]">
+          <div className="flex w-[100%] relative flex-col scrollbar-hide justify-between md:flex-row">
+            {/* <div className="flex w-[50%] flex-wrap justify-around">
+              {FinalStaff.map((worker, index) => (
+                <Worker
+                  style={`${
+                    index % 2 ? 'relative top-[82px]' : 'flex-row-reverse'
+                  }`}
+                  align={`${index % 2 ? 'text-left' : 'text-right'}`}
+                  key={worker.id}
+                  info={worker}
+                />
+              ))}
+            </div> */}
+
+            <Swiper
+              effect={'cards'}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="w-[240px] h-[400px]"
+            >
+              <SwiperSlide className="flex bg-w-red shadow-md justify-center items-center drop-shadow-lg rounded-lg">
+                <p className="text-3xl text-center font-bold font-source text-white">
+                  Swipe to explore our team
+                </p>
+              </SwiperSlide>
+
+              {FinalStaff.map((worker, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="bg-white bg-light drop-shadow-2xl border-r-4 border-w-red text-white rounded-lg"
+                >
+                  <Worker key={worker[0].id} info={worker[0]} />
+                  <Worker key={worker[1].id} info={worker[1]} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            <div className="mt-10 md:mt-0 md:w-[50%] lg:mt-0 flex justify-center items-center flex-col lg:max-w-[580px] lg:mx-auto">
               <div className="flex flex-col justify-center ">
                 <p className="font-source text-primary font-light mt-3">
                   At Wayland, we are Building Better - from smart technologies
