@@ -41,13 +41,14 @@ function SwiperCareer({ openModal }) {
       >
         <SwiperSlide className="flex justify-center flex-end w-full">
           <div className="w-[90%] flex flex-col items-center justify-center p-[5px]">
-            <CareerItem openModal={openModal}></CareerItem>
-            <CareerItem openModal={openModal}></CareerItem>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="flex justify-center flex-end w-full">
-          <div className="w-[90%] flex flex-col items-center justify-center">
-            <CareerItem openModal={openModal}></CareerItem>
+            <CareerItem
+              info={{ firstName: 'Asdren', pic: '/assets/staff/asdren.jpg' }}
+              openModal={openModal}
+            ></CareerItem>
+            <CareerItem
+              info={{ firstName: 'Mërgim', pic: '/assets/staff/mergimi.jpg' }}
+              ameopenModal={openModal}
+            ></CareerItem>
           </div>
         </SwiperSlide>
 

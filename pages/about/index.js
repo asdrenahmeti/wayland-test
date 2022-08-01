@@ -12,6 +12,7 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import FinalStaff from '../../data/StaffList'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCards } from 'swiper'
+import Head from 'next/head'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -20,6 +21,10 @@ import 'swiper/css/effect-cards'
 function index() {
   return (
     <>
+      <Head>
+        <title> Wayland | About</title>
+        <meta name="description" content="Wayland official website" />
+      </Head>
       <Section style="pt-32 pb-16">
         <Container style="flex flex-col relative">
           <div className="lg:block hidden absolute top-1/2 -translate-y-1/2 -left-[60px]">
@@ -122,7 +127,7 @@ function index() {
                 <ButtonFill
                   type="light"
                   style="max-w-[130px] mt-6 mx-auto md:mx-0"
-                  link="/contact"
+                  link="/careers"
                   text="Join Us"
                 />
               </div>

@@ -32,25 +32,27 @@ function Footer() {
           <div className="flex flex-row flex-wrap gap-16 items-center">
             {FooterItems.map(item => (
               <div
-                className="flex flex-col font-source text-sm uppercase gap-2"
+                className="cursor-pointer flex flex-col font-source text-sm uppercase gap-2"
                 key={item.id}
               >
                 {item.items?.map((subItem, index) => (
                   <Link href={`/${subItem.link}`} key={index}>
-                    <a>{subItem.name.toUpperCase()}</a>
+                    <a className="cursor-pointer">
+                      {subItem.name.toUpperCase()}
+                    </a>
                   </Link>
                 ))}
               </div>
             ))}
             <div className="flex flex-row font-source text-sm uppercase gap-3 sm:flex-col lg:flex-col">
               <Link href={'https://www.linkedin.com/company/waylandio'}>
-                <a className="hover:animate-bounce p-1 ">
+                <a className="cursor-pointer hover:animate-bounce p-1 ">
                   <FiFacebook className="w-6 h-6" />
                 </a>
               </Link>
 
               <Link href={'https://www.linkedin.com/company/waylandio'}>
-                <a className="hover:animate-bounce p-1">
+                <a className="cursor-pointer hover:animate-bounce p-1">
                   <FiLinkedin className="w-6 h-6" />
                 </a>
               </Link>

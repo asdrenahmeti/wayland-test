@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Container from '../../components/Container/Container'
 import Section from '../../components/Section/Section'
 import styles from '../../styles/Career.module.scss'
@@ -17,6 +18,10 @@ function Career() {
   }, [])
   return (
     <>
+      <Head>
+        <title> Wayland | Careers</title>
+        <meta name="description" content="Wayland official website" />
+      </Head>
       <Section style="pt-32 pb-16 lg:h-screen flex lg:pt-44 relative overflow-hidden">
         <Container style="flex flex-col lg:items-center relative lg:justify-between lg:flex-row relative overflow-hidden">
           <div className="relative flex-1 order-2 lg:max-w-[500px]">

@@ -24,9 +24,9 @@ const NavItems = [
     name: 'INDUSTRIES',
     desc: 'Wayland teams specialize in software and robotics technologies that provide key value across industries.',
     subs: [
-      { name: 'healthcare', link: '/industries' },
-      { name: 'robotics', link: '/industries' },
-      { name: 'education', link: '/industries' }
+      { name: 'healthcare', link: '/construction' },
+      { name: 'robotics', link: '/construction' },
+      { name: 'education', link: '/construction' }
     ]
   },
   {

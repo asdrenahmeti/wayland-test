@@ -6,10 +6,15 @@ import Button from '../../components/Button/Button'
 import TabbedContact from '../../components/Tab/TabbedContact'
 import ContactAnimation from '../../components/ContactAnimation/ContactAnimation'
 import ContactAnimationSvg from '../../public/assets/contact-animation.svg'
+import Head from 'next/head'
 
 function Connect() {
   return (
     <>
+      <Head>
+        <title> Wayland | Contact</title>
+        <meta name="description" content="Wayland official website" />
+      </Head>
       <Section style={'flex pt-24 md:h-auto lg:py-48 lg:h-screen'}>
         <Container
           style={'flex flex-col md:flex-row md:gap-24 md:items-center'}
