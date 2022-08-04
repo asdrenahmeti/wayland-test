@@ -17,9 +17,11 @@ function Connect() {
       </Head>
       <Section style={'flex pt-24 md:h-auto lg:py-48 lg:h-screen'}>
         <Container
-          style={'flex flex-col md:flex-row md:gap-24 md:items-center'}
+          style={
+            'flex flex-col md:flex-row md:gap-24 md:items-center md:justify-between'
+          }
         >
-          <div className="mb-4 flex items-center sm:mx-auto">
+          <div className="mb-4 flex">
             <ContactAnimation
               firstPhrase="hear"
               secondPhrase="from"

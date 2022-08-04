@@ -93,7 +93,7 @@ const StaffList = [
       name: 'Fitim Halimi',
       email: 'fitim@wayland.io',
       position: 'Software Engineer',
-      image: '/assets/staff/missing.png'
+      image: '/assets/staff/fitimi.jpg'
     }
   ],
   [
@@ -118,7 +118,7 @@ const StaffList = [
       name: 'Kostadin Angelov',
       email: 'kostadin@wayland.io',
       position: 'Software Engineer',
-      image: '/assets/staff/missing.png'
+      image: '/assets/staff/konstadin.jpg'
     },
     {
       id: 9,
