@@ -122,20 +122,29 @@ const StaffList = [
     },
     {
       id: 9,
+      name: 'Nita Katona',
+      email: 'nita@wayland.io',
+      position: 'Software Engineer',
+      image: '/assets/staff/nita.jpg'
+    }
+  ],
+  [
+    {
+      id: 10,
       name: 'Olisa Boshnjaku',
       email: 'olisa@wayland.io',
       position: 'Graphic Designer',
       image: '/assets/staff/olisa.jpg'
-    }
-  ],
-  [
+    },
     {
       id: 6,
       name: 'Shkumbin Bajrami',
       email: 'shkumbin@wayland.io',
       position: 'Software Engineer',
       image: '/assets/staff/shkumbini.jpg'
-    },
+    }
+  ],
+  [
     {
       id: 7,
       name: 'Tomislav Bakracevski',

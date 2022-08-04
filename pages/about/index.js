@@ -99,7 +99,9 @@ function index() {
                   className="bg-white bg-light drop-shadow-2xl border-r-4 border-w-red text-white rounded-lg"
                 >
                   <Worker key={worker[0].id} info={worker[0]} />
-                  <Worker key={worker[1].id} info={worker[1]} />
+                  {worker[1]?.id && (
+                    <Worker key={worker[1].id} info={worker[1]} />
+                  )}
                 </SwiperSlide>
               ))}
             </Swiper>

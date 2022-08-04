@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from 'react'
 import NavItems from './NavItems'
 import Image from 'next/image'
@@ -104,24 +105,28 @@ function Navbar() {
                   </div>
                   <ul className="flex flex-row -top-6 relative">
                     {nav.subs.map((sub, index) => {
-                      return (
-                        <Link href={sub.link} key={index}>
-                          {sub.link.startsWith('https') ? (
-                            <a
-                              target="_blank"
-                              className="text-primary mr-10 font-mulish font-normal text-base flex items-center"
-                            >
-                              <AiOutlineRight className="inline-block text-w-pink mr-2" />
-                              {sub.name.toUpperCase()}
-                            </a>
-                          ) : (
+                      if (sub.external) {
+                        return (
+                          <a
+                            key={index}
+                            target="_blank"
+                            href={`https://${sub.link}`}
+                            className="text-primary mr-10 font-mulish font-normal text-base flex items-center"
+                          >
+                            <AiOutlineRight className="inline-block text-w-pink mr-2" />
+                            {sub.name.toUpperCase()}
+                          </a>
+                        )
+                      } else {
+                        return (
+                          <Link href={sub.link} key={index} prefetch={false}>
                             <a className="text-primary mr-10 font-mulish font-normal text-base flex items-center">
                               <AiOutlineRight className="inline-block text-w-pink mr-2" />
                               {sub.name.toUpperCase()}
                             </a>
-                          )}
-                        </Link>
-                      )
+                          </Link>
+                        )
+                      }
                     })}
                   </ul>
                 </div>
