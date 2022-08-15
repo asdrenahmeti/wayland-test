@@ -3,7 +3,7 @@ import Section from '../../components/Section/Section'
 import Container from '../../components/Container/Container'
 import Worker from '../../components/Worker/Worker'
 import ButtonFill from '../../components/Button/ButtonFill'
-import PartnerSlider from '../../components/PartnerSlider/PartnerSlider'
+// import PartnerSlider from '../../components/PartnerSlider/PartnerSlider'
 // import styles from '../../styles/About.module.scss'
 import AboutItems from '../../components/AboutSlider/AboutSlider'
 import SwiperPhoto from '../../components/SwiperPhoto/SwiperPhoto'
@@ -156,11 +156,11 @@ function index() {
           </div>
         </Container>
       </Section>
-      <Section style={'mb-10'}>
+      {/* <Section style={'mb-10'}>
         <Container style={'relative py-10'}>
           <PartnerSlider></PartnerSlider>
         </Container>
-      </Section>
+      </Section> */}
     </>
   )
 }

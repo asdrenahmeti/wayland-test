@@ -1,10 +1,10 @@
 import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 
-function Layout({ children }) {
+function Layout({ children, page }) {
   return (
     <>
-      <Navbar />
+      <Navbar page={page} />
       {children}
       <Footer />
     </>

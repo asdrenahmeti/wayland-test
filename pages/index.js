@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Section from '../components/Section/Section'
 import Container from '../components/Container/Container'
 import Globe from '../public/assets/images/globe.svg'
-import Phone from '../public/assets/phone-animation.svg'
+// import Phone from '../public/assets/phone-animation.svg'
 import Button from '../components/Button/Button'
 import ButtonFill from '../components/Button/ButtonFill'
 import ServiceSlider from '../components/ServiceSlider/ServiceSlider'
@@ -18,6 +18,8 @@ import MachineLearning from '../public/assets/icons/machine-learning.svg'
 import Particles from '../components/Particles/Particles'
 import { motion } from 'framer-motion'
 // import HomeHero from '../components/HomeHero/HomeHero'
+import Lottie from 'lottie-react'
+import PhoneAnimation from './../public/assets/phone-animation.json'
 
 const Home = () => {
   const cardVariants = {
@@ -42,17 +44,17 @@ const Home = () => {
       </Head>
 
       <Section
-        style={`flex items-center h-screen justify-center lg:block bg-primary`}
+        style={`flex items-center h-screen justify-center lg:block bg-[url('/assets/backgrounds/wayland-home.jpg')] bg-cover`}
       >
         <Container style="pt-12 h-full flex flex-col overflow-hidden items-center justify-center relative">
           <div className="absolute top-[45%] lg:top-[50%] -translate-y-2/4">
             {/* <HomeHero></HomeHero> */}
-            <Image
+            {/* <Image
               src="/assets/home.svg"
               width="600"
               height="600"
               alt="Hero Image"
-            ></Image>
+            ></Image> */}
           </div>
 
           <motion.div
@@ -76,7 +78,7 @@ const Home = () => {
             }}
           >
             <h1 className="uppercase leading-normal text-center text-white text-4xl font-bold relative z-[50] lg:text-5xl">
-              Let&apos;s dive together <br /> into digital magic
+              Systems engineering at <br /> the speed of innovation
             </h1>
           </motion.div>
 
@@ -288,7 +290,7 @@ const Home = () => {
               ></Button>
             </div>
             <div className="flex flex-col justify-center w-full lg:h-full lg:w-2/4 relative">
-              <Image src={Phone} alt="Phone animation image"></Image>
+              <Lottie animationData={PhoneAnimation} loop={true} />
             </div>
           </div>
         </Container>

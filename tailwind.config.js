@@ -85,6 +85,7 @@ module.exports = {
       colors: {
         primary: '#222324',
         'primary-transparent': 'rgba(34,35,36,0.7)',
+        'primary-navbar': 'rgba(34,35,36,0)',
         secondary: '#FF5177',
         tertiary: '#FF8850',
         quarternary: '#B53BFF',
