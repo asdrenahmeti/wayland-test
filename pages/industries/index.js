@@ -6,25 +6,23 @@ import IndustryV3 from '../../components/IndustriesSliders/IndustryV3'
 import IndustryV4 from '../../components/IndustriesSliders/IndustryV4'
 import IndustryV5 from '../../components/IndustriesSliders/IndustryV5'
 
-
-
 import Section from '../../components/Section/Section'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 // Import Swiper styles
-import 'swiper/css/bundle';
+import 'swiper/css/bundle'
 
 function index() {
   return (
     <Section style={'flex py-12 h-screen cursor-pointer'}>
       <Swiper
         slidesPerView={1}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={swiper => console.log(swiper)}
-        direction='vertical'
+        onSlideChange={() => {}}
+        onSwiper={() => {}}
+        direction="vertical"
       >
         <SwiperSlide>
           <Section style={'h-screen'}>

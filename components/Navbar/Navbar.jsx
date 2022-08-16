@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavItems from './NavItems'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,18 +15,47 @@ import { FiLinkedin } from 'react-icons/fi'
 import { FiInstagram } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
-function Navbar() {
+function Navbar({ page }) {
   const [toggleModal, setToggleModal] = useState(false)
   const [activeMenu, setActiveMenu] = useState(null)
+  const [transparentMenu, setTransparentMenu] = useState(true)
 
   const changeActiveToggle = index => {
-    console.log(typeof index)
     if (index === activeMenu) {
       setActiveMenu(null)
     } else {
       setActiveMenu(index)
     }
   }
+
+  const changeBackground = () => {
+    if (page != '/') {
+      setTransparentMenu(false)
+      return
+    }
+
+    if (window.scrollY >= 100) {
+      setTransparentMenu(false)
+    } else {
+      setTransparentMenu(true)
+    }
+  }
+
+  useEffect(() => {
+    // if (page != '/') {
+    //   setTransparentMenu(false)
+    // } else {
+    //   setTransparentMenu(true)
+    // }
+
+    changeBackground()
+
+    window.addEventListener('scroll', changeBackground)
+
+    return () => {
+      window.removeEventListener('scroll', changeBackground)
+    }
+  }, [page])
 
   const changeToggleAndActive = () => {
     setToggleModal(false)
@@ -63,7 +92,13 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-primary font-mulish flex justify-between items-center fixed top-0 w-full z-[10000]">
+      <nav
+        className={`${
+          transparentMenu
+            ? 'bg-primary-navbar transition-all duration-500 ease-in-out'
+            : 'bg-primary'
+        } font-mulish flex justify-between  items-center fixed top-0 w-full z-[10000]`}
+      >
         <Container style={'font-mulish py-3 flex justify-between items-center'}>
           <Link href="/">
             <a className="relative z-10" onClick={changeToggleAndActive}>

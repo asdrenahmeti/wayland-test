@@ -18,7 +18,8 @@ import Head from 'next/head'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 
-function index() {
+function index({ name }) {
+  console.log('COMPONENT NAME', name)
   return (
     <>
       <Head>
