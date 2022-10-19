@@ -1,18 +1,20 @@
-import Footer from '../Footer/Footer'
-import Navbar from '../Navbar/Navbar'
+// import Footer from '../Footer/Footer'
+// import Navbar from '../Navbar/Navbar'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import Construction from '../../pages/construction'
 
-function Layout({ children }) {
+function Layout() {
   const router = useRouter()
 
   useEffect(() => {}, [router.asPath])
 
   return (
     <>
-      <Navbar page={router.pathname} />
+      {/* <Navbar page={router.pathname} />
       {children}
-      <Footer />
+      <Footer /> */}
+      <Construction />
     </>
   )
 }

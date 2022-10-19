@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/link-passhref */
 import React from 'react'
@@ -19,11 +20,9 @@ import Particles from '../components/Particles/Particles'
 import { motion } from 'framer-motion'
 // import HomeHero from '../components/HomeHero/HomeHero'
 import Lottie from 'lottie-react'
-import PhoneAnimation from './../public/assets/phone-animation.json'
+import PhoneAnimation from '../public/assets/phone-animation.json'
 
 const Home = ({ name }) => {
-  console.log('COMPONENT NAME', name)
-
   const cardVariants = {
     offscreen: {
       opacity: 0
