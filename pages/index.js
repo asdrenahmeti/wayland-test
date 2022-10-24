@@ -21,7 +21,7 @@ import { motion } from 'framer-motion'
 import Lottie from 'lottie-react'
 import PhoneAnimation from './../public/assets/phone-animation.json'
 
-const Home = ({ name }) => {
+const Home = ({}) => {
   const cardVariants = {
     offscreen: {
       opacity: 0
